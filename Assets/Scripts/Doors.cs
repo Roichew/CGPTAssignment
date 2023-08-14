@@ -12,9 +12,6 @@ public class Doors : MonoBehaviour
 
     public bool inReach;
 
-
-
-
     void Start()
     {
         inReach = false;
@@ -37,8 +34,6 @@ public class Doors : MonoBehaviour
             openText.SetActive(false);
         }
     }
-
-
 
 
 
@@ -72,7 +67,6 @@ public class Doors : MonoBehaviour
     void DoorCloses()
     {
         Debug.Log("It Closes");
-        Debug.Log(gameObject.tag);
         door.SetBool("Open", false);
         door.SetBool("Closed", true);
     }
