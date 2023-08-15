@@ -9,6 +9,7 @@ public class TutorialEnemyAI : MonoBehaviour
 {
     public NavMeshAgent AI;
     public List<Transform> Destinations;
+    public GameObject gameObject;
     public Animator animator;
     public float walkSpeed, chaseSpeed, minidleTime, maxidleTime, idleTime;
     public float viewDistance, catchDistance, chaseTime, minChaseTime, maxChaseTime;
@@ -24,13 +25,13 @@ public class TutorialEnemyAI : MonoBehaviour
 
     void Start()
     {
-        walking = true;
-        randNum = Random.Range(0, destinationAmount);
-        currentDest = Destinations[randNum];
-
+        EnemyState();
     }
     void Update()
     {
+        walking = true;
+        randNum = Random.Range(0, destinationAmount);
+        currentDest = Destinations[randNum];
         Vector3 direction = (player.position - transform.position).normalized;
         RaycastHit hit;
         if (Physics.Raycast(transform.position + rayCastOffset, direction, out hit, viewDistance)) { 
@@ -50,6 +51,7 @@ public class TutorialEnemyAI : MonoBehaviour
             if (AI.remainingDistance <= catchDistance)
             {
               player.gameObject.SetActive(false);
+                animator.ResetTrigger("idle");
                 animator.SetTrigger("jumpscare");
                 StartCoroutine(deathRoutine());
                 chasing = false;
@@ -84,7 +86,13 @@ public class TutorialEnemyAI : MonoBehaviour
 
     }
 
-
+    public void EnemyState(bool state)
+    {
+        if (state)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     IEnumerator stayIdle()
     {
         idleTime = Random.Range(minidleTime, maxidleTime);
