@@ -25,7 +25,7 @@ public class TutorialEnemyAI : MonoBehaviour
 
     void Start()
     {
-        EnemyState();
+        EnemyState(false);
     }
     void Update()
     {
@@ -38,7 +38,7 @@ public class TutorialEnemyAI : MonoBehaviour
             if(hit.collider.gameObject.tag == "Player")
             {
                 walking = false;
-                StopCoroutine("stayIdle");
+                //StopCoroutine("stayIdle");
                 StopCoroutine("chaseRoutine");
                 chasing = true;
             }
@@ -66,51 +66,59 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.updateRotation = true;
             if (AI.remainingDistance <= AI.stoppingDistance)
             {
-                randNum2 = Random.Range(0, 2);
-                if (randNum2 == 0)
-                {
-                    randNum = Random.Range(0, destinationAmount);
-                    currentDest = Destinations[randNum];
-                }
-                if (randNum2 == 1)
-                {
-                    animator.ResetTrigger("idle");
-                    StopCoroutine("stayIdle");
-                    StartCoroutine("stayIdle");
-                    walking = false;
-                }
+                //randNum2 = Random.Range(0, 2);
+                //if (randNum2 == 0)
+                //{
+                //    randNum = Random.Range(0, destinationAmount);
+                //    currentDest = Destinations[randNum];
+                //}
+                //if (randNum2 == 1)
+                //{
+                    //animator.ResetTrigger("idle");
+                    //StopCoroutine("stayIdle");
+                    //StartCoroutine("stayIdle");
+                    //walking = false;
+                //}
+                //gameObject.SetActive(false);
             }
 
         }
-        //AI.destination = player.position;
 
     }
 
     public void EnemyState(bool state)
     {
-        if (state)
+        if (state==false)
         {
             gameObject.SetActive(false);
+
+        } else if (state==true)
+        {
+            gameObject.SetActive(true);
         }
     }
-    IEnumerator stayIdle()
-    {
-        idleTime = Random.Range(minidleTime, maxidleTime);
-        yield return new WaitForSeconds(idleTime);
-        walking = true;
-        randNum = Random.Range(0, destinationAmount);
-        currentDest = Destinations[randNum];
-        animator.ResetTrigger("idle");
-    }
 
+    //IEnumerator stayIdle()
+    //{
+    //    idleTime = Random.Range(minidleTime, maxidleTime);
+    //    yield return new WaitForSeconds(idleTime);
+    //    walking = true;
+    //    randNum = Random.Range(0, destinationAmount);
+    //    currentDest = Destinations[randNum];
+    //    animator.ResetTrigger("idle");
+    //}
+    public void stopChase()
+    {
+        walking = true;
+        chasing = false;
+        StopCoroutine("chaseRoutine");
+        currentDest = Destinations[0];
+    }
     IEnumerator chaseRoutine()
     {
         chaseTime = Random.Range(minChaseTime, maxChaseTime);
         yield return new WaitForSeconds(chaseTime);
-        walking = true;
-        chasing = false;
-        randNum = Random.Range(0, destinationAmount);
-        currentDest = Destinations[randNum];
+        stopChase();
     }
 
     IEnumerator deathRoutine()
