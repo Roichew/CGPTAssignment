@@ -38,7 +38,9 @@ public class TutorialHidingScript : MonoBehaviour
     {
         if (interactable == true)
         {
-            if (Input.GetButtonDown("Interact"))
+            //Debug.Log("Update interactable true");
+
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("E");
                 hideText.SetActive(false);
@@ -52,16 +54,18 @@ public class TutorialHidingScript : MonoBehaviour
                     }
                 }
                 stopHideText.SetActive(true);
-                hiding = true;
                 normalPlayer.SetActive(false);
+                hiding = true;
                 interactable = false;
                 
             }
         }
+        
 
         if (hiding == true)
         {
-            if (Input.GetButtonDown("Interact"))
+            Debug.Log("Hiding True");
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 stopHideText.SetActive(false);
                 normalPlayer.SetActive(true);
