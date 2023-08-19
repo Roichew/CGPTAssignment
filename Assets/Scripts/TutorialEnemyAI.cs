@@ -18,7 +18,8 @@ public class TutorialEnemyAI : MonoBehaviour
     public Transform player;
     Transform currentDest;
     Vector3 dest;
-    int randNum, randNum2;
+    public int spawnNumber;
+    int randNum;
     public int destinationAmount;
     public Vector3 rayCastOffset;
     public string deathScene;
@@ -31,8 +32,7 @@ public class TutorialEnemyAI : MonoBehaviour
     {
         walking = true;
         despawn = false;
-        randNum = Random.Range(0, destinationAmount);
-        currentDest = Destinations[randNum];
+        currentDest = Destinations[spawnNumber];
         Vector3 direction = (player.position - transform.position).normalized;
         RaycastHit hit;
         if (Physics.Raycast(transform.position + rayCastOffset, direction, out hit, viewDistance)) { 
@@ -65,9 +65,12 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.destination = dest;
             AI.speed = walkSpeed;
             AI.updateRotation = true;
-            if (AI.remainingDistance == AI.stoppingDistance)
+            if (AI.remainingDistance <= AI.stoppingDistance)
             {
-                
+                if (!AI.hasPath || AI.velocity.sqrMagnitude == 0f)
+                {
+                    //despawn = true;
+                }
             }
 
         }

@@ -6,6 +6,7 @@ public class FirstSpawner : MonoBehaviour
 {
     public GameObject gameObject;
     public TutorialEnemyAI tutorialAI;
+    public float spawnNumber;
 
     void OnTriggerEnter(Collider other)
     {
@@ -13,5 +14,10 @@ public class FirstSpawner : MonoBehaviour
         {
             tutorialAI.EnemyState(true);
         }
+    }
+
+    void Start()
+    {
+       tutorialAI.spawnNumber =  (int)spawnNumber;
     }
 }
