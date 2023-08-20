@@ -18,9 +18,14 @@ public class playerSprinting : MonoBehaviour
         sprintMovement = PlayerInput.actions["Sprint"];
     }
 
-    void OnEnable() => playerController.OnBeforeMove += OnBeforeMove;
-    
-    void OnDisable() => playerController.OnBeforeMove -= OnBeforeMove;
+    void OnEnable() { 
+        playerController.OnBeforeMove += OnBeforeMove;
+        
+    }
+
+    void OnDisable() { 
+        playerController.OnBeforeMove -= OnBeforeMove;
+    }
 
 
     void OnBeforeMove()

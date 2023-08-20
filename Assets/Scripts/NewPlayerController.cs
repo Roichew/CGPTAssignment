@@ -18,13 +18,15 @@ public class NewPlayerController : MonoBehaviour
     PlayerInput playerInput;
     InputAction moveAction;
     InputAction sprintMovement;
-
+    public AudioSource walkingSound, runningSound;
+    bool isRun = false, isWalk = false;
     public event Action OnBeforeMove;
 
     internal float movementSpeedMultiplier;
     // Start is called before the first frame update
     void Awake()
     {
+        isWalk = true;
         characterController = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions["Move"];
@@ -49,6 +51,7 @@ public class NewPlayerController : MonoBehaviour
         OnBeforeMove?.Invoke();
 
         var input = GetMovementInput();
+
         //to make movement less snappy
         var factor = acceleration * Time.deltaTime;
         velocity.x = Mathf.Lerp(velocity.x,input.x,factor);
