@@ -9,7 +9,7 @@ public class TutorialEnemyAI : MonoBehaviour
 {
     public NavMeshAgent AI;
     public List<Transform> Destinations;
-    public GameObject gameObject;
+    public GameObject enemyObject;
     public Animator animator;
     public float walkSpeed, chaseSpeed, minidleTime, maxidleTime, idleTime;
     public float viewDistance, catchDistance, chaseTime, minChaseTime, maxChaseTime;
@@ -65,30 +65,28 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.destination = dest;
             AI.speed = walkSpeed;
             AI.updateRotation = true;
-            if (AI.remainingDistance <= AI.stoppingDistance)
+            Debug.Log(Vector3.Distance(transform.position, currentDest.position));
+            if (Vector3.Distance(transform.position, currentDest.position) < 3f)
             {
-                if (!AI.hasPath || AI.velocity.sqrMagnitude == 0f)
-                {
-                    //despawn = true;
-                }
+                Debug.Log(transform.position);
+                // Enemy has reached the destination, despawn it
+                Destroy(enemyObject);
             }
 
         }
-        if(despawn == true)
-        {
-            gameObject.SetActive(false);
-        }
+       
+
     }
 
     public void EnemyState(bool state)
     {
         if (state==false)
         {
-            gameObject.SetActive(false);
+            enemyObject.SetActive(false);
 
         } else if (state==true)
         {
-            gameObject.SetActive(true);
+            enemyObject.SetActive(true);
         }
     }
 
@@ -99,6 +97,7 @@ public class TutorialEnemyAI : MonoBehaviour
         StopCoroutine("chaseRoutine");
         currentDest = Destinations[0];
     }
+
     IEnumerator chaseRoutine()
     {
         chaseTime = Random.Range(minChaseTime, maxChaseTime);
