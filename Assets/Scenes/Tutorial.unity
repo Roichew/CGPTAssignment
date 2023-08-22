@@ -2322,7 +2322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &186505236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5785,7 +5785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc98030df79a0204285eaa2d5e144ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSense: 200
+  mouseSense: 500
   playerBody: {fileID: 726687737}
   camLookStart: 35
   camLookEnd: -90
@@ -10220,7 +10220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &834608610
 MonoBehaviour:
   m_ObjectHideFlags: 0
