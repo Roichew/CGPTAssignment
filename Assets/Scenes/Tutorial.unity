@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 640.06647, g: 329.2278, b: 390.28278, a: 1}
+  m_IndirectSpecularColor: {r: 640.1602, g: 329.2925, b: 390.357, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1884,7 +1884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &162605281
 Transform:
   m_ObjectHideFlags: 0
@@ -2473,8 +2473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192709935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.67, y: 5.4295, z: -67.72}
-  m_LocalScale: {x: 7.8675804, y: 5.1207104, z: 1}
+  m_LocalPosition: {x: 6.67, y: 5.4729, z: -67.72}
+  m_LocalScale: {x: 7.8675804, y: 5.20725, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 302055353}
@@ -6880,8 +6880,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594899076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.34, y: 5.4295, z: -125.42}
-  m_LocalScale: {x: 7.505047, y: 5.1213584, z: 1}
+  m_LocalPosition: {x: 14.34, y: 5.476, z: -125.42}
+  m_LocalScale: {x: 7.505047, y: 5.214567, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 302055353}
@@ -21988,8 +21988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083422706}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 33.97, y: 5.4272, z: -110.23}
-  m_LocalScale: {x: 5.868374, y: 5.125865, z: 1}
+  m_LocalPosition: {x: 33.97, y: 5.4697, z: -110.23}
+  m_LocalScale: {x: 5.868374, y: 5.210954, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 302055353}
@@ -22910,7 +22910,7 @@ MonoBehaviour:
   walking: 0
   chasing: 0
   despawn: 0
-  player: {fileID: 0}
+  player: {fileID: 726687737}
   spawnNumber: 0
   destinationAmount: 1
   rayCastOffset: {x: 0, y: 0, z: 0}
@@ -24014,9 +24014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a5921939c804d43becfead9cfa1f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideText: {fileID: 0}
-  stopHideText: {fileID: 931145572}
-  normalPlayer: {fileID: 0}
+  hideText: {fileID: 2144662215}
+  stopHideText: {fileID: 547076550}
+  normalPlayer: {fileID: 726687732}
   hidingPlayer: {fileID: 1272651454}
   enemyAI: {fileID: 2139694797}
   enemyTransform: {fileID: 508535771}
