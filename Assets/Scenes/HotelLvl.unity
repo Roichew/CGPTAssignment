@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4603.525, g: 3251.5942, b: 3224.2935, a: 1}
+  m_IndirectSpecularColor: {r: 6715.032, g: 3341.0688, b: 3764.9146, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 4549607}
   - component: {fileID: 4549606}
   - component: {fileID: 4549605}
+  - component: {fileID: 4549608}
   m_Layer: 0
   m_Name: OuterWall (13)
   m_TagString: Untagged
@@ -228,6 +229,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4549603}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4549608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &9560707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1468,6 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 109000056}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 109000055}
   inReach: 0
 --- !u!65 &109000058
@@ -1772,6 +1788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 117801819}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 117801818}
   inReach: 0
 --- !u!65 &117801821
@@ -2067,6 +2084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 129557741}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 129557740}
   inReach: 0
 --- !u!65 &129557743
@@ -2364,6 +2382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 142859618}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 142859617}
   inReach: 0
 --- !u!65 &142859620
@@ -2887,6 +2906,7 @@ GameObject:
   - component: {fileID: 164112870}
   - component: {fileID: 164112869}
   - component: {fileID: 164112868}
+  - component: {fileID: 164112871}
   m_Layer: 0
   m_Name: OuterWall (15)
   m_TagString: Untagged
@@ -2980,6 +3000,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164112866}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &164112871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164112866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &167364621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,6 +3181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 167364624}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 167364623}
   inReach: 0
 --- !u!65 &167364626
@@ -3337,6 +3372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 167849828}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 167849827}
   inReach: 0
 --- !u!65 &167849830
@@ -3647,6 +3683,7 @@ GameObject:
   - component: {fileID: 226271340}
   - component: {fileID: 226271339}
   - component: {fileID: 226271338}
+  - component: {fileID: 226271341}
   m_Layer: 0
   m_Name: OuterWall (7)
   m_TagString: Untagged
@@ -3740,6 +3777,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226271336}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &226271341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226271336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &244190242
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +5477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 383951548}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 383951547}
   inReach: 0
 --- !u!65 &383951550
@@ -6121,6 +6173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 419788378}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 419788377}
   inReach: 0
 --- !u!65 &419788380
@@ -6234,6 +6287,7 @@ GameObject:
   - component: {fileID: 423782361}
   - component: {fileID: 423782360}
   - component: {fileID: 423782359}
+  - component: {fileID: 423782362}
   m_Layer: 0
   m_Name: OuterWall (21)
   m_TagString: Untagged
@@ -6327,6 +6381,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423782357}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &423782362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423782357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &438512900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6494,6 +6562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 438512903}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 438512902}
   inReach: 0
 --- !u!65 &438512905
@@ -6631,6 +6700,8 @@ MonoBehaviour:
   movementSpeed: 5
   mass: 5
   acceleration: 30
+  walkingSound: {fileID: 0}
+  runningSound: {fileID: 0}
 --- !u!114 &440903886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8244,6 +8315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 560371382}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 560371381}
   inReach: 0
 --- !u!65 &560371384
@@ -8893,6 +8965,7 @@ GameObject:
   - component: {fileID: 650789594}
   - component: {fileID: 650789593}
   - component: {fileID: 650789592}
+  - component: {fileID: 650789595}
   m_Layer: 0
   m_Name: OuterWall (9)
   m_TagString: Untagged
@@ -8986,6 +9059,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650789590}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &650789595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650789590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &663041224
 GameObject:
   m_ObjectHideFlags: 0
@@ -9153,6 +9240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 663041227}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 663041226}
   inReach: 0
 --- !u!65 &663041229
@@ -10392,6 +10480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 786865316}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 786865320}
   inReach: 0
 --- !u!65 &786865318
@@ -11724,6 +11813,7 @@ GameObject:
   - component: {fileID: 872436211}
   - component: {fileID: 872436210}
   - component: {fileID: 872436209}
+  - component: {fileID: 872436212}
   m_Layer: 0
   m_Name: OuterWall (8)
   m_TagString: Untagged
@@ -11817,6 +11907,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872436207}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &872436212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872436207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &875379795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12352,6 +12456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 906094368}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 906094367}
   inReach: 0
 --- !u!65 &906094370
@@ -13289,6 +13394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 963765627}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 963765626}
   inReach: 0
 --- !u!65 &963765629
@@ -13324,6 +13430,7 @@ GameObject:
   - component: {fileID: 965745337}
   - component: {fileID: 965745336}
   - component: {fileID: 965745335}
+  - component: {fileID: 965745338}
   m_Layer: 0
   m_Name: OuterWall (11)
   m_TagString: Untagged
@@ -13417,6 +13524,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965745333}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &965745338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965745333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &966153133
 GameObject:
   m_ObjectHideFlags: 0
@@ -13584,6 +13705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 966153136}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 966153135}
   inReach: 0
 --- !u!65 &966153138
@@ -13774,6 +13896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 980646907}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 980646906}
   inReach: 0
 --- !u!65 &980646909
@@ -15193,6 +15316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1069167576}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1069167575}
   inReach: 0
 --- !u!65 &1069167578
@@ -15494,6 +15618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1080569872}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1080569871}
   inReach: 0
 --- !u!65 &1080569874
@@ -16179,6 +16304,7 @@ GameObject:
   - component: {fileID: 1152931564}
   - component: {fileID: 1152931563}
   - component: {fileID: 1152931562}
+  - component: {fileID: 1152931566}
   m_Layer: 0
   m_Name: OuterWall (4)
   m_TagString: Untagged
@@ -16272,6 +16398,20 @@ Transform:
   m_Father: {fileID: 670560621}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152931566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152931561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1159770801
 GameObject:
   m_ObjectHideFlags: 0
@@ -16494,6 +16634,7 @@ GameObject:
   - component: {fileID: 1164303060}
   - component: {fileID: 1164303059}
   - component: {fileID: 1164303058}
+  - component: {fileID: 1164303062}
   m_Layer: 0
   m_Name: OuterWall (6)
   m_TagString: Untagged
@@ -16587,6 +16728,20 @@ Transform:
   m_Father: {fileID: 670560621}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1164303062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164303057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &1188203093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17015,6 +17170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1212354904}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1212354903}
   inReach: 0
 --- !u!65 &1212354906
@@ -17672,6 +17828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1275363436}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1275363435}
   inReach: 0
 --- !u!65 &1275363438
@@ -18470,6 +18627,7 @@ GameObject:
   - component: {fileID: 1323119236}
   - component: {fileID: 1323119235}
   - component: {fileID: 1323119234}
+  - component: {fileID: 1323119237}
   m_Layer: 0
   m_Name: OuterWall (19)
   m_TagString: Untagged
@@ -18563,6 +18721,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323119232}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1323119237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323119232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1323208304
 GameObject:
   m_ObjectHideFlags: 0
@@ -18730,6 +18902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1323208307}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1323208306}
   inReach: 0
 --- !u!65 &1323208309
@@ -20913,6 +21086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1414924695}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1414924694}
   inReach: 0
 --- !u!65 &1414924697
@@ -21210,6 +21384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1417055942}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1417055941}
   inReach: 0
 --- !u!65 &1417055944
@@ -22587,6 +22762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1507803130}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1507803129}
   inReach: 0
 --- !u!65 &1507803132
@@ -22793,6 +22969,7 @@ GameObject:
   - component: {fileID: 1534806793}
   - component: {fileID: 1534806792}
   - component: {fileID: 1534806791}
+  - component: {fileID: 1534806794}
   m_Layer: 0
   m_Name: OuterWall (14)
   m_TagString: Untagged
@@ -22886,6 +23063,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534806789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1534806794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534806789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1540482495
 GameObject:
   m_ObjectHideFlags: 0
@@ -23053,6 +23244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1540482498}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1540482497}
   inReach: 0
 --- !u!65 &1540482500
@@ -23349,6 +23541,7 @@ GameObject:
   - component: {fileID: 1550159563}
   - component: {fileID: 1550159562}
   - component: {fileID: 1550159561}
+  - component: {fileID: 1550159564}
   m_Layer: 0
   m_Name: OuterWall (20)
   m_TagString: Untagged
@@ -23442,6 +23635,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550159559}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1550159564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550159559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1560033225
 GameObject:
   m_ObjectHideFlags: 0
@@ -24044,6 +24251,7 @@ GameObject:
   - component: {fileID: 1627865808}
   - component: {fileID: 1627865807}
   - component: {fileID: 1627865806}
+  - component: {fileID: 1627865810}
   m_Layer: 0
   m_Name: OuterWall (1)
   m_TagString: Untagged
@@ -24137,6 +24345,20 @@ Transform:
   m_Father: {fileID: 670560621}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 91.131, z: 0}
+--- !u!114 &1627865810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627865805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &1628767781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24227,6 +24449,7 @@ GameObject:
   - component: {fileID: 1630777907}
   - component: {fileID: 1630777906}
   - component: {fileID: 1630777905}
+  - component: {fileID: 1630777908}
   m_Layer: 0
   m_Name: OuterWall (10)
   m_TagString: Untagged
@@ -24320,6 +24543,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630777903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1630777908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630777903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &1643588269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24594,6 +24831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1646449106}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1646449105}
   inReach: 0
 --- !u!65 &1646449108
@@ -25076,6 +25314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1665465340}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1665465339}
   inReach: 0
 --- !u!65 &1665465342
@@ -25299,6 +25538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1677376368}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1677376367}
   inReach: 0
 --- !u!65 &1677376370
@@ -26763,6 +27003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1760682935}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1760682934}
   inReach: 0
 --- !u!65 &1760682937
@@ -27524,6 +27765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1801080152}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1801080151}
   inReach: 0
 --- !u!65 &1801080154
@@ -28468,6 +28710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1849800485}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1849800484}
   inReach: 0
 --- !u!65 &1849800487
@@ -29263,6 +29506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1887373599}
   openText: {fileID: 1350583620}
+  gameObject: {fileID: 0}
   doorSound: {fileID: 1887373598}
   inReach: 0
 --- !u!65 &1887373601
@@ -29426,6 +29670,7 @@ GameObject:
   - component: {fileID: 1898105126}
   - component: {fileID: 1898105125}
   - component: {fileID: 1898105124}
+  - component: {fileID: 1898105127}
   m_Layer: 0
   m_Name: OuterWall (2)
   m_TagString: Untagged
@@ -29519,6 +29764,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898105122}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1898105127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898105122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1899996001
 GameObject:
   m_ObjectHideFlags: 0
@@ -30199,6 +30458,7 @@ GameObject:
   - component: {fileID: 1953197926}
   - component: {fileID: 1953197925}
   - component: {fileID: 1953197924}
+  - component: {fileID: 1953197928}
   m_Layer: 0
   m_Name: OuterWall
   m_TagString: Untagged
@@ -30292,6 +30552,20 @@ Transform:
   m_Father: {fileID: 670560621}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -0.749, z: 0}
+--- !u!114 &1953197928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953197923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1975120747
 GameObject:
   m_ObjectHideFlags: 0
@@ -30304,6 +30578,7 @@ GameObject:
   - component: {fileID: 1975120751}
   - component: {fileID: 1975120750}
   - component: {fileID: 1975120749}
+  - component: {fileID: 1975120752}
   m_Layer: 0
   m_Name: OuterWall (18)
   m_TagString: Untagged
@@ -30397,6 +30672,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975120747}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1975120752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975120747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1979853356
 GameObject:
   m_ObjectHideFlags: 0
@@ -30762,6 +31051,7 @@ GameObject:
   - component: {fileID: 1999400708}
   - component: {fileID: 1999400707}
   - component: {fileID: 1999400706}
+  - component: {fileID: 1999400709}
   m_Layer: 0
   m_Name: OuterWall (17)
   m_TagString: Untagged
@@ -30855,6 +31145,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999400704}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1999400709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999400704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1 &1999558340
 GameObject:
   m_ObjectHideFlags: 0
@@ -32323,6 +32627,7 @@ GameObject:
   - component: {fileID: 2120684034}
   - component: {fileID: 2120684033}
   - component: {fileID: 2120684032}
+  - component: {fileID: 2120684035}
   m_Layer: 0
   m_Name: OuterWall (16)
   m_TagString: Untagged
@@ -32416,6 +32721,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120684030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2120684035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120684030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ce5303e5ea4894994dd7e426ba9b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScrollX: 0.5
+  ScrollY: 0.5
 --- !u!1001 &2121182724
 PrefabInstance:
   m_ObjectHideFlags: 0
