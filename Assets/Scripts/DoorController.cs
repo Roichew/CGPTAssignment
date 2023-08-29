@@ -24,9 +24,14 @@ public class DoorController : MonoBehaviour
     }
     void OnMouseDown()
     { //THIS FUNCTION WILL DETECT THE MOUSE CLICK ON A COLLIDER,IN OUR CASE WILL DETECT THE CLICK ON THE BUTTON
-
-        doorIsOpening = true;
+        UnlockDoor();
         //if we click on the button door we must start to open
+    }
+
+    public void UnlockDoor()
+    {
+        doorIsOpening = true;
+
     }
 
 }

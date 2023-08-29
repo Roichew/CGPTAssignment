@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6715.032, g: 3341.0688, b: 3764.9146, a: 1}
+  m_IndirectSpecularColor: {r: 6719.9756, g: 3342.6157, b: 3766.516, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3411,7 +3411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &178896692
 Transform:
   m_ObjectHideFlags: 0
@@ -15081,7 +15081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1064318705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15100,6 +15100,7 @@ MonoBehaviour:
   maxAngle: 90
   lockSpeed: 10
   lockRange: 10
+  doorController: {fileID: 0}
 --- !u!4 &1064318706
 Transform:
   m_ObjectHideFlags: 0

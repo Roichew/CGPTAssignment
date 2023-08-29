@@ -7,12 +7,16 @@ public class LockPick : MonoBehaviour
     public Camera cam;
     public Transform innerLock;
     public Transform pickPosition;
+    
+    public GameObject Door;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
 
     [Range(1, 25)]
     public float lockRange = 10;
+
+    public DoorController doorController;
 
     private float eulerAngle;
     private float unlockAngle;
@@ -31,6 +35,7 @@ public class LockPick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.localPosition = pickPosition.position;
 
         if (movePick)
@@ -75,7 +80,9 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
+                Unlocked();
             }
+
             else
             {
                 float randomRotation = Random.insideUnitCircle.x;
@@ -88,5 +95,9 @@ public class LockPick : MonoBehaviour
     {
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
+    }
+    void Unlocked()
+    {
+        Door.transform.Translate(Vector3.up * Time.deltaTime * 800);
     }
 }
