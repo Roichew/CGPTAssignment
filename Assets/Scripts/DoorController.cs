@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public AudioSource OpenSound;
 
     public GameObject Door;
     public bool doorIsOpening;
@@ -31,7 +32,7 @@ public class DoorController : MonoBehaviour
     public void UnlockDoor()
     {
         doorIsOpening = true;
-
+        OpenSound.Play();
     }
 
 }

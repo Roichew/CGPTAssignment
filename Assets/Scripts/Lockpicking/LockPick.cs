@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LockPick : MonoBehaviour
 {
     public Camera cam;
     public Transform innerLock;
     public Transform pickPosition;
-    
-    public GameObject Door;
+
+    public AudioSource Finished;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
@@ -17,6 +18,8 @@ public class LockPick : MonoBehaviour
     public float lockRange = 10;
 
     public DoorController doorController;
+
+    public string levelToLoad;
 
     private float eulerAngle;
     private float unlockAngle;
@@ -30,6 +33,8 @@ public class LockPick : MonoBehaviour
     void Start()
     {
         newLock();
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -80,7 +85,8 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
-                Unlocked();
+                Invoke("Unlocked", 1);
+                Finished.Play();
             }
 
             else
@@ -98,6 +104,6 @@ public class LockPick : MonoBehaviour
     }
     void Unlocked()
     {
-        Door.transform.Translate(Vector3.up * Time.deltaTime * 800);
+       SceneManager.LoadScene(levelToLoad);
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test/WirePuzzle.unity
     guid: e1bf1ee34c3a233489f6ef4b5c1d2534
+  - enabled: 1
+    path: Assets/Scenes/HUBHUBHUBHUB.unity
+    guid: a325df79ccad8b8418091910a6bf879a
   m_configObjects: {}
