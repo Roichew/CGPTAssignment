@@ -5,7 +5,6 @@ using UnityEngine;
 public class UILock : MonoBehaviour
 {
 
-    public GameObject UIPuzzle;
     public GameObject openText;
     public GameObject GameObject;
 
