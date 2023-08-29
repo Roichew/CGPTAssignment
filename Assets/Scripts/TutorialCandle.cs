@@ -5,8 +5,10 @@ using UnityEngine;
 public class TutorialCandle : MonoBehaviour
 {
     public GameObject candle; // The GameObject representing the unlit candle
+    public GameObject candleText;
     public GameObject objectsToHide; // Old game objects to hide
     public GameObject[] objectsToShow; // New game objects to show
+    bool interactable;
     //public Light candleLight; // The light component of the candle
     //public ParticleSystem candleParticles; // Particle system for the candle's flame effect
 
@@ -18,14 +20,32 @@ public class TutorialCandle : MonoBehaviour
         //candle.SetActive(false);
         //candleLight.enabled = false;
         //candleParticles.Stop();
+        interactable = false;
     }
 
-     void OnTriggerEnter(Collider other)
+     void OnTriggerStay(Collider other)
     {
         Debug.Log(other);
         if (other.CompareTag("Reach"))
         {
             Debug.Log("in range");
+            candleText.SetActive(true);
+            interactable = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Reach"))
+        {
+            Debug.Log("Out of range");
+            candleText.SetActive(false);
+            interactable = false;
+        }
+    }
+
+    void Update()
+    {
+        if (interactable == true) {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Eeeeee");
@@ -39,7 +59,7 @@ public class TutorialCandle : MonoBehaviour
         }
     }
 
-     void LightCandle()
+    void LightCandle()
     {
         isLit = true;
         candle.SetActive(true);
