@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Doors : MonoBehaviour
 {
     public Animator door;
     public GameObject openText;
-    public GameObject gameObject;
+    //public GameObject GameObject;
     public AudioSource doorSound;
+    public AudioSource Boo;
 
+    public GameObject Image;
 
     public bool inReach;
 
@@ -42,7 +45,6 @@ public class Doors : MonoBehaviour
 
         if (inReach && Input.GetButtonDown("Interact"))
         {
-            
             DoorOpens();
         }
 
@@ -61,6 +63,7 @@ public class Doors : MonoBehaviour
         door.SetBool("Open", true);
         door.SetBool("Closed", false);
         doorSound.Play();
+        Jumpscare() ;
 
     }
 
@@ -71,5 +74,20 @@ public class Doors : MonoBehaviour
         door.SetBool("Closed", true);
     }
 
+    void Jumpscare()
+    {
+        Image.SetActive(true);
+        Boo.Play();
+        Invoke("JumpImage", 1);
+    }
 
+    void JumpImage()
+    {
+        Image.SetActive(false);
+    } 
+
+    void randomizer()
+    {
+
+    }
 }
