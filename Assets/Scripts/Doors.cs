@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Codice.Client.BaseCommands;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public class Doors : MonoBehaviour
     public GameObject Image;
 
     public bool inReach;
+
+    public int Randomizer;
 
     void Start()
     {
@@ -76,18 +79,22 @@ public class Doors : MonoBehaviour
 
     void Jumpscare()
     {
-        Image.SetActive(true);
-        Boo.Play();
-        Invoke("JumpImage", 1);
+        Randomizer = Random.Range(0, 4);
+        if (Randomizer == 4)
+        {
+            Image.SetActive(true);
+            Boo.Play();
+            Invoke("JumpImage", 1);
+        }
+        else
+        {
+
+        }
     }
 
     void JumpImage()
     {
         Image.SetActive(false);
-    } 
-
-    void randomizer()
-    {
-
     }
+
 }
