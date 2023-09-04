@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6718.6865, g: 3342.0825, b: 3765.8286, a: 1}
+  m_IndirectSpecularColor: {r: 6720.448, g: 3342.8384, b: 3766.852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1486,9 +1486,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 109000055}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &109000058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1904,9 +1904,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 117801818}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &117801821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2299,9 +2299,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 129557740}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &129557743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2696,9 +2696,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 142859617}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &142859620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3593,9 +3593,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 167364623}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &167364626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3883,9 +3883,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 167849827}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &167849830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5945,9 +5945,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 383951547}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &383951550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6740,9 +6740,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 419788377}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &419788380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7228,9 +7228,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 438512902}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &438512905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9080,9 +9080,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 560371381}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &560371384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10099,9 +10099,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 663041226}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &663041229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11575,9 +11575,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 786865320}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &786865318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13566,9 +13566,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 906094367}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &906094370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14603,9 +14603,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 963765626}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &963765629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15013,9 +15013,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 966153135}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &966153138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15303,9 +15303,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 980646906}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &980646909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16885,9 +16885,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1069167575}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1069167578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17287,9 +17287,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1080569871}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1080569874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18938,9 +18938,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1212354903}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1212354906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19695,9 +19695,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1275363435}
   Boo: {fileID: 129557744}
+  SpawnChance: 5
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1275363438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20868,9 +20868,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1323208306}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1323208309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23048,9 +23048,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1414924694}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1414924697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23445,9 +23445,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1417055941}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1417055944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24922,9 +24922,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1507803129}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1507803132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25503,9 +25503,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1540482497}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1540482500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27189,9 +27189,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1646449105}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1646449108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27771,9 +27771,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1665465339}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1665465342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28094,9 +28094,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1677376367}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1677376370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29658,9 +29658,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1760682934}
   Boo: {fileID: 129557744}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1760682937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30519,9 +30519,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1801080151}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1801080154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31639,9 +31639,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1849800484}
   Boo: {fileID: 109000059}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1849800487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32534,9 +32534,9 @@ MonoBehaviour:
   openText: {fileID: 1350583620}
   doorSound: {fileID: 1887373598}
   Boo: {fileID: 117801822}
+  SpawnChance: 0
   Image: {fileID: 1837922676}
   inReach: 0
-  Randomizer: 0
 --- !u!65 &1887373601
 BoxCollider:
   m_ObjectHideFlags: 0

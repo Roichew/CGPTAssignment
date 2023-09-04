@@ -11,15 +11,16 @@ public class Doors : MonoBehaviour
     //public GameObject GameObject;
     public AudioSource doorSound;
     public AudioSource Boo;
-
+    public int SpawnChance;
     public GameObject Image;
-
+    bool isOpen;
     public bool inReach;
 
 
     void Start()
     {
         inReach = false;
+        isOpen = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -45,7 +46,7 @@ public class Doors : MonoBehaviour
     void Update()
     {
 
-        if (inReach && Input.GetButtonDown("Interact"))
+        if (inReach && Input.GetButtonDown("Interact") && isOpen == false )
         {
             DoorOpens();
         }
@@ -62,6 +63,7 @@ public class Doors : MonoBehaviour
         Debug.Log("It Opens");
         door.SetBool("Open", true);
         door.SetBool("Closed", false);
+        isOpen = true;
         doorSound.Play();
         Jumpscare() ;
 
@@ -76,8 +78,8 @@ public class Doors : MonoBehaviour
 
     void Jumpscare()
     {
-        int Randomizer = Random.Range(0, 1);
-        if (Randomizer == 4)
+        int Randomizer = Random.Range(0, 4);
+        if (Randomizer <= SpawnChance)
         {
             Image.SetActive(true);
             Boo.Play();
