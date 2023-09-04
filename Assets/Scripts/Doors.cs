@@ -16,7 +16,6 @@ public class Doors : MonoBehaviour
 
     public bool inReach;
 
-    public int Randomizer;
 
     void Start()
     {
@@ -57,8 +56,6 @@ public class Doors : MonoBehaviour
         }
 
 
-
-
     }
     void DoorOpens ()
     {
@@ -79,12 +76,13 @@ public class Doors : MonoBehaviour
 
     void Jumpscare()
     {
-        Randomizer = Random.Range(0, 4);
+        int Randomizer = Random.Range(0, 1);
         if (Randomizer == 4)
         {
             Image.SetActive(true);
             Boo.Play();
             Invoke("JumpImage", 1);
+            Debug.Log(Randomizer);
         }
         else
         {
