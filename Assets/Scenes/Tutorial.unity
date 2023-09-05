@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 640.4224, g: 329.42874, b: 390.59723, a: 1}
+  m_IndirectSpecularColor: {r: 614.9134, g: 309.2637, b: 327.08353, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -567,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69240151}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 35.99, y: 3.99, z: -74.04}
+  m_LocalPosition: {x: 49.86, y: 3.99, z: -74.04}
   m_LocalScale: {x: 13.646197, y: 8.1672, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4149,8 +4149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 311870123}
   openText: {fileID: 290978839}
-  gameObject: {fileID: 0}
   doorSound: {fileID: 311870122}
+  Boo: {fileID: 0}
+  SpawnChance: 0
+  Image: {fileID: 0}
   inReach: 0
 --- !u!65 &311870125
 BoxCollider:
@@ -4610,8 +4612,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 331663999}
   openText: {fileID: 290978839}
-  gameObject: {fileID: 0}
   doorSound: {fileID: 331664001}
+  Boo: {fileID: 0}
+  SpawnChance: 0
+  Image: {fileID: 0}
   inReach: 0
 --- !u!82 &331664001
 AudioSource:
@@ -5023,8 +5027,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 349506041}
   openText: {fileID: 290978839}
-  gameObject: {fileID: 0}
   doorSound: {fileID: 349506040}
+  Boo: {fileID: 0}
+  SpawnChance: 0
+  Image: {fileID: 0}
   inReach: 0
 --- !u!65 &349506043
 BoxCollider:
@@ -5108,8 +5114,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367371384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.48, y: 3.99, z: -81.24}
-  m_LocalScale: {x: 66.018845, y: 8.1672, z: 1}
+  m_LocalPosition: {x: 10.3551, y: 3.99, z: -81.24}
+  m_LocalScale: {x: 79.77057, y: 8.1672, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 302055353}
@@ -6338,8 +6344,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 459248976}
   openText: {fileID: 290978839}
-  gameObject: {fileID: 0}
   doorSound: {fileID: 459248975}
+  Boo: {fileID: 0}
+  SpawnChance: 0
+  Image: {fileID: 0}
   inReach: 0
 --- !u!65 &459248978
 BoxCollider:
@@ -7307,7 +7315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508535770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.9, y: 0.5, z: -67.53}
+  m_LocalPosition: {x: 36.23, y: 0.5, z: -67.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10303,7 +10311,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 1.2
   m_MinRegionArea: 5
-  m_NavMeshData: {fileID: 23800000, guid: fbf0fbf0e14662d4fac99666707ba0b3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 5f126caf6f09f2d4fb5011e37041be03, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &782549916
 Transform:
@@ -11969,8 +11977,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 858797781}
   openText: {fileID: 290978839}
-  gameObject: {fileID: 0}
   doorSound: {fileID: 858797780}
+  Boo: {fileID: 0}
+  SpawnChance: 0
+  Image: {fileID: 0}
   inReach: 0
 --- !u!65 &858797783
 BoxCollider:
@@ -12357,8 +12367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877682010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.413, y: 3.99, z: -67.72}
-  m_LocalScale: {x: 26.822317, y: 8.1672, z: 1}
+  m_LocalPosition: {x: 29.643, y: 3.99, z: -67.72}
+  m_LocalScale: {x: 41.28223, y: 8.1672, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 302055353}
@@ -23057,8 +23067,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999652092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.92163, y: -7.23824, z: -6.142784}
-  m_LocalScale: {x: 7.754925, y: 3.08842, z: 1.2596642}
+  m_LocalPosition: {x: -32.7973, y: -7.2382, z: -6.142784}
+  m_LocalScale: {x: 9.179504, y: 3.08842, z: 1.2596642}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 782549916}
@@ -23600,7 +23610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070879747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0022964478, y: 21.96943, z: -0.4421234}
+  m_LocalPosition: {x: 9.4, y: 21.96943, z: -0.4421234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
