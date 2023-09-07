@@ -11,7 +11,8 @@ public class TutorialEnemyAI : MonoBehaviour
     public List<Transform> Destinations;
     public GameObject enemyObject;
     public Animator animator;
-    public float walkSpeed, chaseSpeed, minidleTime, maxidleTime, idleTime;
+    public AudioSource SpawnSound,DespawnSound,JumpscareSound,HeartBeatSound;
+    public float walkSpeed, chaseSpeed;
     public float viewDistance, catchDistance, chaseTime, minChaseTime, maxChaseTime;
     public float jumpscareTime;
     public bool walking, chasing, despawn;
@@ -42,10 +43,12 @@ public class TutorialEnemyAI : MonoBehaviour
                 //StopCoroutine("stayIdle");
                 StopCoroutine("chaseRoutine");
                 chasing = true;
+                
             }
         }
         if (chasing == true)
         {
+            
             dest = player.position;
             AI.destination = dest;
             AI.speed = chaseSpeed;
@@ -54,6 +57,8 @@ public class TutorialEnemyAI : MonoBehaviour
               player.gameObject.SetActive(false);
                 animator.ResetTrigger("idle");
                 animator.SetTrigger("jumpscare");
+                JumpscareSound.Play();
+                HeartBeatSound.Play();
                 StartCoroutine(deathRoutine());
                 chasing = false;
             }
@@ -70,7 +75,7 @@ public class TutorialEnemyAI : MonoBehaviour
             {
                 Debug.Log(transform.position);
                 // Enemy has reached the destination, despawn it
-                Destroy(enemyObject);
+                enemyObject.SetActive(false);
             }
 
         }

@@ -6,6 +6,8 @@ public class TutorialHidingScript : MonoBehaviour
 {
     public GameObject hideText, stopHideText;
     public GameObject normalPlayer, hidingPlayer;
+    public AudioSource OpeningSound;
+    public AudioSource ClosingSound;
     public TutorialEnemyAI enemyAI;
     public Transform enemyTransform;
     bool interactable, hiding;
@@ -43,6 +45,7 @@ public class TutorialHidingScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("E");
+                ClosingSound.Play();
                 hideText.SetActive(false);
                 hidingPlayer.SetActive(true);
                 float distance = Vector3.Distance(enemyTransform.position, normalPlayer.transform.position);
@@ -67,6 +70,7 @@ public class TutorialHidingScript : MonoBehaviour
             Debug.Log("Hiding True");
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                OpeningSound.Play();
                 stopHideText.SetActive(false);
                 normalPlayer.SetActive(true);
                 hidingPlayer.SetActive(false);
