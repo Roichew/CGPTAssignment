@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Reach
   - TutorialDoor
+  - Floor
   layers:
   - Default
   - TransparentFX
