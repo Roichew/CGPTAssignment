@@ -37,7 +37,7 @@ public class NotesController : MonoBehaviour
 
     private bool isOpen = false;
     private bool inReach = false;
-    TutorialEnemyAI enemyAI;
+    //TutorialEnemyAI enemyAI;
 
 
     public void showNote()
