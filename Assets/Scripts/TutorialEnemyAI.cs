@@ -74,7 +74,7 @@ public class TutorialEnemyAI : MonoBehaviour
             Debug.Log(Vector3.Distance(transform.position, currentDest.position));
             if (Vector3.Distance(transform.position, currentDest.position) < 3f)
             {
-                //Debug.Log(transform.position);
+                Debug.Log(transform.position);
                 enemyObject.SetActive(false);
             }
 

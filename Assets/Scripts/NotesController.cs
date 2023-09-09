@@ -72,24 +72,21 @@ public class NotesController : MonoBehaviour
     {
         if (inReach == true)
         {
-            Debug.Log("Reached");
-            if (isOpen == true)
-            {
-                if (Input.GetKeyDown(closeKey))
-                {
-                    Debug.Log(closeKey);
-                    DisableNote();
-                }
-
-            }
-            else
-            {
+            Debug.Log("Reached");  
                 if (Input.GetKeyDown(OpenKey))
                 {
                     Debug.Log(OpenKey);
                     showNote();
                 }
+        }
+        if (isOpen == true)
+        {
+            if (Input.GetKeyDown(closeKey))
+            {
+                Debug.Log(closeKey);
+                DisableNote();
             }
+
         }
     }
 
