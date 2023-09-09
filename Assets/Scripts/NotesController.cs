@@ -14,7 +14,7 @@ public class NotesController : MonoBehaviour
     [Space(10)]
     [SerializeField] private NewPlayerController player;
     
-    [Header("Input")]
+    [Header("Notes")]
     [SerializeField] private GameObject noteCanvas;
     [SerializeField] private TMP_Text noteTextUI;
 
@@ -22,22 +22,28 @@ public class NotesController : MonoBehaviour
     [SerializeField] [TextArea]private string noteText;
 
     [Space(10)]
+    [Header("Events")]
     [SerializeField] private UnityEvent openEvent; 
+    [SerializeField] private UnityEvent closeEvent; 
     
     [Space(10)]
+    [Header("Interaction UI")]
     [SerializeField] private GameObject openNote;
     [SerializeField] private GameObject closeNote;
 
     [Space(10)]
+    [Header("Hide Objects")]
     [SerializeField] private GameObject[] HideObject;
 
     private bool isOpen = false;
     private bool inReach = false;
+    TutorialEnemyAI enemyAI;
 
 
     public void showNote()
     {
         openNote.SetActive(false);
+        closeNote.SetActive(true);
         noteTextUI.text = noteText;
         noteCanvas.SetActive(true);
         openEvent.Invoke();
@@ -50,8 +56,11 @@ public class NotesController : MonoBehaviour
     void DisableNote()
     {
         noteCanvas.SetActive(false);
+        closeNote.SetActive(false);
         DisablePlayer(false);
         isOpen = false;
+        closeEvent.Invoke();
+        hideobjects();
     }
 
     void DisablePlayer(bool disable)

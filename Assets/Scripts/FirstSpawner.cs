@@ -10,22 +10,14 @@ public class FirstSpawner : MonoBehaviour
     public float spawnNumber;
     bool isSpawned;
 
-    void OnTriggerEnter(Collider other)
+
+    public void spawnEnemy()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (isSpawned == false)
         {
-            if (isSpawned==false) { 
             tutorialAI.EnemyState(true);
-            //Instantiate(tutorialAI.enemyObject,tutorialAI.spawnLocation);
             tutorialAI.SpawnSound.Play();
             isSpawned = true;
-            }
         }
-    }
-
-    void Start()
-    {
-       tutorialAI.spawnNumber =  (int)spawnNumber;
-        isSpawned = false;
     }
 }
