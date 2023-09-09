@@ -16,6 +16,7 @@ public class TutorialEnemyAI : MonoBehaviour
     public float viewDistance, catchDistance, chaseTime, minChaseTime, maxChaseTime;
     public float jumpscareTime;
     public bool walking, chasing, despawn;
+    public Transform spawnLocation;
     public Transform player;
     Transform currentDest;
     Vector3 dest;
@@ -33,6 +34,7 @@ public class TutorialEnemyAI : MonoBehaviour
     {
         walking = true;
         despawn = false;
+
         currentDest = Destinations[spawnNumber];
         Vector3 direction = (player.position - transform.position).normalized;
         RaycastHit hit;
@@ -40,7 +42,6 @@ public class TutorialEnemyAI : MonoBehaviour
             if(hit.collider.gameObject.tag == "Player")
             {
                 walking = false;
-                //StopCoroutine("stayIdle");
                 StopCoroutine("chaseRoutine");
                 chasing = true;
                 
@@ -55,17 +56,17 @@ public class TutorialEnemyAI : MonoBehaviour
             if (AI.remainingDistance <= catchDistance)
             {
               player.gameObject.SetActive(false);
-                animator.ResetTrigger("idle");
                 animator.SetTrigger("jumpscare");
                 JumpscareSound.Play();
                 HeartBeatSound.Play();
-                StartCoroutine(deathRoutine());
+                StartCoroutine("deathRoutine");
                 chasing = false;
             }
         }
 
         if (walking == true)
         {
+
             dest = currentDest.position;
             AI.destination = dest;
             AI.speed = walkSpeed;
@@ -73,8 +74,7 @@ public class TutorialEnemyAI : MonoBehaviour
             Debug.Log(Vector3.Distance(transform.position, currentDest.position));
             if (Vector3.Distance(transform.position, currentDest.position) < 3f)
             {
-                Debug.Log(transform.position);
-                // Enemy has reached the destination, despawn it
+                //Debug.Log(transform.position);
                 enemyObject.SetActive(false);
             }
 
@@ -114,5 +114,6 @@ public class TutorialEnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(jumpscareTime);
         SceneManager.LoadScene(deathScene);
-    }
+    } 
+    
 }
