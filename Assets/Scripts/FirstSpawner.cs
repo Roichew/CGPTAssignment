@@ -14,12 +14,12 @@ public class FirstSpawner : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             tutorialAI.EnemyState(true);
-            Instantiate(gameObject,SpawnPlace.position,SpawnPlace.rotation);
+            //Instantiate(gameObject,SpawnPlace.position,SpawnPlace.rotation);
         }
     }
 
     void Start()
     {
-       tutorialAI.spawnNumber =  (int)spawnNumber;
+       
     }
 }

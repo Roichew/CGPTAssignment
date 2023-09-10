@@ -18,7 +18,6 @@ public class TutorialEnemyAI : MonoBehaviour
     public Transform player;
     Transform currentDest;
     Vector3 dest;
-    public int spawnNumber;
     int randNum;
     public int destinationAmount;
     public Vector3 rayCastOffset;
@@ -32,15 +31,17 @@ public class TutorialEnemyAI : MonoBehaviour
     {
         walking = true;
         despawn = false;
-        currentDest = Destinations[spawnNumber];
+        randNum = Random.Range(0, destinationAmount);
+        currentDest = Destinations[randNum];
         Vector3 direction = (player.position - transform.position).normalized;
         RaycastHit hit;
         if (Physics.Raycast(transform.position + rayCastOffset, direction, out hit, viewDistance)) { 
             if(hit.collider.gameObject.tag == "Player")
             {
                 walking = false;
-                //StopCoroutine("stayIdle");
+                StopCoroutine("stayIdle");
                 StopCoroutine("chaseRoutine");
+                StartCoroutine("chaseRoutine");
                 chasing = true;
             }
         }
@@ -65,14 +66,13 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.destination = dest;
             AI.speed = walkSpeed;
             AI.updateRotation = true;
-            Debug.Log(Vector3.Distance(transform.position, currentDest.position));
-            if (Vector3.Distance(transform.position, currentDest.position) < 3f)
+            if(AI.remainingDistance <= AI.stoppingDistance)
             {
-                Debug.Log(transform.position);
-                // Enemy has reached the destination, despawn it
-                enemyObject.SetActive(false);
+                AI.speed = 0;
+                StopCoroutine("stayIdle");
+                StartCoroutine("stayIdle");
+                walking = false;
             }
-
         }
        
 
@@ -96,6 +96,15 @@ public class TutorialEnemyAI : MonoBehaviour
         chasing = false;
         StopCoroutine("chaseRoutine");
         currentDest = Destinations[0];
+    }
+
+    IEnumerator stayIdle()
+    {
+        idleTime = Random.Range(minidleTime, maxidleTime);
+        yield return new WaitForSeconds(idleTime);
+        walking=true;
+        randNum = Random.Range(0, destinationAmount);
+        currentDest = Destinations[randNum];
     }
 
     IEnumerator chaseRoutine()
