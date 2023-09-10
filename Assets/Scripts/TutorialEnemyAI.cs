@@ -70,7 +70,7 @@ public class TutorialEnemyAI : MonoBehaviour
             {
                 Debug.Log(transform.position);
                 // Enemy has reached the destination, despawn it
-                Destroy(enemyObject);
+                enemyObject.SetActive(false);
             }
 
         }

@@ -6,6 +6,7 @@ public class FirstSpawner : MonoBehaviour
 {
     public GameObject gameObject;
     public TutorialEnemyAI tutorialAI;
+    public Transform SpawnPlace;
     public float spawnNumber;
 
     void OnTriggerEnter(Collider other)
@@ -13,6 +14,7 @@ public class FirstSpawner : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             tutorialAI.EnemyState(true);
+            Instantiate(gameObject,SpawnPlace.position,SpawnPlace.rotation);
         }
     }
 
