@@ -53,7 +53,7 @@ public class TutorialCandle : MonoBehaviour
                 {
                     //LightCandle();
                     HideOldObjects();
-                    //ShowNewObjects();
+                    ShowNewObjects();
                 }
             }
         }

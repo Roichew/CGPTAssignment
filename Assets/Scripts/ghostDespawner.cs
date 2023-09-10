@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialEnemyDespawner : MonoBehaviour
+public class ghostDespawner : MonoBehaviour
 {
     public List<Transform> destination; // The destination the enemy is heading towards
     public int destinationNumber;

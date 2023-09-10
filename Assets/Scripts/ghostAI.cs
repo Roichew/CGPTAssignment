@@ -5,7 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using static Codice.Client.Common.WebApi.WebApiEndpoints;
 
-public class TutorialEnemyAI : MonoBehaviour
+public class ghostAI : MonoBehaviour
 {
     public NavMeshAgent AI;
     public List<Transform> Destinations;

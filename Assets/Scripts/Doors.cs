@@ -65,8 +65,10 @@ public class Doors : MonoBehaviour
         door.SetBool("Closed", false);
         isOpen = true;
         doorSound.Play();
-        Jumpscare() ;
-
+        if (SpawnChance >0 )
+        {
+            Jumpscare();
+        }
     }
 
     void DoorCloses()

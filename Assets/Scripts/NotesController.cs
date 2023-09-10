@@ -110,9 +110,13 @@ public class NotesController : MonoBehaviour
 
     void hideobjects()
     {
-        for(int i = 0; i < HideObject.Length; i++)
+        //for(int i = 0; i < HideObject.Length; i++)
+        //{
+        //    HideObject[i].gameObject.SetActive(false);
+        //}
+        foreach (GameObject obj in HideObject)
         {
-            HideObject[i].gameObject.SetActive(false);
+            obj.SetActive(false);
         }
     }
 }
