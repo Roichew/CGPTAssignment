@@ -8,7 +8,7 @@ public class TutorialHidingScript : MonoBehaviour
     public GameObject normalPlayer, hidingPlayer;
     public AudioSource OpeningSound;
     public AudioSource ClosingSound;
-    public ghostAI enemyAI;
+    public TutorialEnemyAI enemyAI;
     public Transform enemyTransform;
     bool interactable, hiding;
     public float loseDistance;
@@ -16,7 +16,7 @@ public class TutorialHidingScript : MonoBehaviour
     void Start()
     {
         interactable = false;
-        hiding = false; 
+        hiding = false;
     }
     void OnTriggerStay(Collider other)
     {
@@ -60,10 +60,10 @@ public class TutorialHidingScript : MonoBehaviour
                 normalPlayer.SetActive(false);
                 hiding = true;
                 interactable = false;
-                
+
             }
         }
-        
+
 
         if (hiding == true)
         {
