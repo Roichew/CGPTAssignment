@@ -66,15 +66,21 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.destination = dest;
             AI.speed = walkSpeed;
             AI.updateRotation = true;
-            if(AI.remainingDistance <= AI.stoppingDistance)
+            //if(AI.remainingDistance <= AI.stoppingDistance)
+            //{
+            //    AI.speed = 0;
+            //    StopCoroutine("stayIdle");
+            //    StartCoroutine("stayIdle");
+            //    walking = false;
+            //}
+            if (Vector3.Distance(transform.position, currentDest.position) < 3f)
             {
-                AI.speed = 0;
-                StopCoroutine("stayIdle");
-                StartCoroutine("stayIdle");
-                walking = false;
+                Debug.Log(transform.position);
+                enemyObject.SetActive(false);
             }
+
         }
-       
+
 
     }
 
