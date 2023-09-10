@@ -6,26 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HotelLvl.unity
-    guid: c79912c0b22fa33478683e8f28c5f4e5
-  - enabled: 1
-    path: Assets/Scenes/Test/WirePuzzle.unity
-    guid: e1bf1ee34c3a233489f6ef4b5c1d2534
-  - enabled: 1
-    path: Assets/Scenes/HUBHUBHUBHUB.unity
-    guid: a325df79ccad8b8418091910a6bf879a
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: b3726cf3a018c3e4ab4710c6b897fa89
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 2a0c5027c3bbb7c47bccde6791d5574f
+    path: Assets/Scenes/Menu.unity
+    guid: 5b5488cca3c89b04ebf4f28e913646ee
   - enabled: 1
-    path: Assets/Scenes/HouseLvl.unity
-    guid: ceb25780fdf0e614882fccb06bc48085
-  - enabled: 1
-    path: Assets/Scenes/Hospital.unity
-    guid: a22c948b57ed36e40b58e287f4ab61bb
+    path: Assets/Scenes/Test.unity
+    guid: 3481fbde20804d0418c7a40d83e07e00
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c347e744219ba2d46bdee6cbb60206fd, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 591654a483e884c42bf003a798ba0708, type: 2}

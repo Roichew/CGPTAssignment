@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void LevelTut()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void QuitGame()

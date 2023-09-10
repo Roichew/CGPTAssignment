@@ -12,8 +12,9 @@ public class TutorialCandle : MonoBehaviour
     //public Light candleLight; // The light component of the candle
     //public ParticleSystem candleParticles; // Particle system for the candle's flame effect
 
-     bool isLit = false;
+    bool isLit = false;
 
+   
      void Start()
     {
         // Ensure the candle and its light are initially disabled

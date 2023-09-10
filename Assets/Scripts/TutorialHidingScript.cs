@@ -14,7 +14,7 @@ public class TutorialHidingScript : MonoBehaviour
     void Start()
     {
         interactable = false;
-        hiding = false; 
+        hiding = false;
     }
     void OnTriggerStay(Collider other)
     {
@@ -34,6 +34,13 @@ public class TutorialHidingScript : MonoBehaviour
             interactable = false;
         }
     }
+
+    public void hideActivate()
+    {
+        hidingPlayer.SetActive(true);
+    }
+        
+
     void Update()
     {
         if (interactable == true)
