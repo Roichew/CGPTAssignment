@@ -8,7 +8,7 @@ public class TutorialHidingScript : MonoBehaviour
     public GameObject normalPlayer, hidingPlayer;
     public AudioSource OpeningSound;
     public AudioSource ClosingSound;
-    public TutorialEnemyAI enemyAI;
+    [SerializeField]public TutorialEnemyAI enemyAI;
     public Transform enemyTransform;
     bool interactable, hiding;
     public float loseDistance;

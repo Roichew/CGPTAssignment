@@ -7,20 +7,28 @@ using static Codice.Client.Common.WebApi.WebApiEndpoints;
 
 public class TutorialEnemyAI : MonoBehaviour
 {
-    public NavMeshAgent AI;
-    public List<Transform> Destinations;
-    public GameObject enemyObject;
-    public Animator animator;
+    [Header("Nav Mesh")]
+    [SerializeField] public NavMeshAgent AI;
+
+    [Space(10)]
+    [SerializeField] public List<Transform> Destinations;
+    [Space(10)]
+    [Header("AI Game Object")]
+    [SerializeField] public GameObject enemyObject;
+    [Space(10)]
+    [SerializeField] public Animator animator;
     public AudioSource SpawnSound,DespawnSound,JumpscareSound,HeartBeatSound;
-    public float walkSpeed, chaseSpeed;
-    public float viewDistance, catchDistance, chaseTime, minChaseTime, maxChaseTime;
-    public float jumpscareTime;
+    [SerializeField] public float walkSpeed, chaseSpeed;
+    [SerializeField] public float viewDistance, catchDistance;
+    [SerializeField] public float jumpscareTime, chaseTime, minChaseTime, maxChaseTime;
     public bool walking, chasing, despawn;
-    public Transform spawnLocation;
-    public Transform player;
+    //public Transform spawnLocation;
+    [Space(10)]
+    [Header("Player")]
+    [SerializeField] public Transform player;
     Transform currentDest;
     Vector3 dest;
-    public int spawnNumber;
+    //public int spawnNumber;
     int randNum;
     public int destinationAmount;
     public Vector3 rayCastOffset;
@@ -35,7 +43,7 @@ public class TutorialEnemyAI : MonoBehaviour
         walking = true;
         despawn = false;
 
-        currentDest = Destinations[spawnNumber];
+        currentDest = Destinations[destinationAmount];
         Vector3 direction = (player.position - transform.position).normalized;
         RaycastHit hit;
         if (Physics.Raycast(transform.position + rayCastOffset, direction, out hit, viewDistance)) { 
@@ -55,7 +63,7 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.speed = chaseSpeed;
             if (AI.remainingDistance <= catchDistance)
             {
-              player.gameObject.SetActive(false);
+                player.gameObject.SetActive(false);
                 animator.SetTrigger("jumpscare");
                 JumpscareSound.Play();
                 HeartBeatSound.Play();
@@ -76,6 +84,7 @@ public class TutorialEnemyAI : MonoBehaviour
             {
                 Debug.Log(transform.position);
                 enemyObject.SetActive(false);
+                //DespawnSound.Play();
             }
 
         }

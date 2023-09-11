@@ -31,12 +31,10 @@ public class NotesController : MonoBehaviour
     [SerializeField] private GameObject openNote;
     [SerializeField] private GameObject closeNote;
 
-    [Space(10)]
-    [Header("Hide Objects")]
-    [SerializeField] private GameObject[] HideObject;
 
     private bool isOpen = false;
     private bool inReach = false;
+    private bool isRead = false;
     //TutorialEnemyAI enemyAI;
 
 
@@ -60,7 +58,8 @@ public class NotesController : MonoBehaviour
         DisablePlayer(false);
         isOpen = false;
         closeEvent.Invoke();
-        hideobjects();
+        isRead = true;
+
     }
 
     void DisablePlayer(bool disable)
@@ -70,23 +69,26 @@ public class NotesController : MonoBehaviour
 
     private void Update()
     {
-        if (inReach == true)
+        if (isRead == false)
         {
-            Debug.Log("Reached");  
+            if (inReach == true)
+            {
+                Debug.Log("Reached");
                 if (Input.GetKeyDown(OpenKey))
                 {
                     Debug.Log(OpenKey);
                     showNote();
                 }
-        }
-        if (isOpen == true)
-        {
-            if (Input.GetKeyDown(closeKey))
-            {
-                Debug.Log(closeKey);
-                DisableNote();
             }
+            if (isOpen == true)
+            {
+                if (Input.GetKeyDown(closeKey))
+                {
+                    Debug.Log(closeKey);
+                    DisableNote();
+                }
 
+            }
         }
     }
 
@@ -108,15 +110,4 @@ public class NotesController : MonoBehaviour
         }
     }
 
-    void hideobjects()
-    {
-        //for(int i = 0; i < HideObject.Length; i++)
-        //{
-        //    HideObject[i].gameObject.SetActive(false);
-        //}
-        foreach (GameObject obj in HideObject)
-        {
-            obj.SetActive(false);
-        }
-    }
 }
