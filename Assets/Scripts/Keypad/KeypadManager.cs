@@ -7,6 +7,7 @@ public class KeypadManager : MonoBehaviour
 {
     [SerializeField] public float PressSpeed;
     [SerializeField] public TextMeshPro UI_KPAD_ScreenCode;
+    [SerializeField] private GameObject UIWinBoard;
 
     // Not-serialized
     private KPAD_Key[] keys;
@@ -66,7 +67,9 @@ public class KeypadManager : MonoBehaviour
 
             UI_KPAD_ScreenCode.color = new Color(0, 1, 0, 1);
 
-            LVLManager.instance.Invoke("TeleportToHub", 1.5f);
+            LVLManager.instance.Invoke("TeleportToHub", 3f);
+
+            UIWinBoard.SetActive(true);
         }
 
         // Lose Condition (Wrong Code)

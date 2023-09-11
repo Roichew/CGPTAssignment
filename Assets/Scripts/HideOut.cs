@@ -11,6 +11,7 @@ public class HideOut : MonoBehaviour
     [SerializeField] float RaycastDistance = 2.25f;
 
     [SerializeField] private KeyCode TriggerKey = KeyCode.E;
+    [SerializeField] private KeyCode ExitKey = KeyCode.Q;
 
     // Not-serialized
     private Collider collider;
@@ -66,7 +67,7 @@ public class HideOut : MonoBehaviour
 
     private void Update()
     {
-        // Gets in or out the wardrobe when the player presses the trigger key
+        // Gets in the wardrobe when the player presses the trigger key
         if (Input.GetKeyDown(TriggerKey)){
 
             // Checks if the player is inside the wardrobe
@@ -77,7 +78,11 @@ public class HideOut : MonoBehaviour
                     GetIn();
                 }
             }
-            else
+        }
+        // Gets in the wardrobe when the player presses the exit key
+        else if (Input.GetKeyDown(ExitKey))
+        {
+            if(isInside)
             {
                 GetOut();
             }

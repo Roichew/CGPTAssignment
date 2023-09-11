@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     private Animator anim;
     private Transform player;
 
+    public bool isOpen { get; set; }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -16,25 +18,18 @@ public class Door : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    private void Open()
+    public void Open()
     {
         anim.SetBool("canClose", false);
         anim.SetBool("canOpen", true);
+        isOpen = true;
     }
 
-    private void Close()
+    public void Close()
     {
         // Switches bool
         anim.SetBool("canOpen", false);
         anim.SetBool("canClose", true);
-    }
-
-    private void Update()
-    {
-        // Checks the distance between the door and the player
-        if (Vector3.Distance(transform.position, player.position) < MinDistanceToPlayer)
-            Open();
-        else
-            Close();
+        isOpen = false;
     }
 }
