@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 5986.905, g: 3824.983, b: 2817.5237, a: 1}
+  m_IndirectSpecularColor: {r: 5985.557, g: 3824.0728, b: 2816.9065, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1688,7 +1688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537912475}
   - component: {fileID: 537912477}
-  - component: {fileID: 537912476}
+  - component: {fileID: 537912478}
   m_Layer: 0
   m_Name: LargeDoor02
   m_TagString: Untagged
@@ -1713,18 +1713,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &537912476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537912472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8095c311116364694222ea1d618a72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &537912477
 Animator:
   serializedVersion: 5
@@ -1735,7 +1723,7 @@ Animator:
   m_GameObject: {fileID: 537912472}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91da195407a2fc245be7edf5dfabdc0f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 785cfcb061d498d48bf80c353ce463ac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1746,6 +1734,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &537912478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537912472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f515f226edefa364faf0c343e09d737d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinDistanceToPlayer: 4
 --- !u!1 &560400147
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,9 +4241,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 784234462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aee13945a4a0fb49903ebb8f57d6f3d, type: 3}
+  m_Script: {fileID: 11500000, guid: ac3f175a4c40ed74fbd3c60c802e591a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MouseSensitivity: 60
+  MinRotX: -125
+  MaxRotX: -45
 --- !u!4 &790149129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475148, guid: b826295956c65444987d7baae67c5858, type: 3}
@@ -5634,7 +5638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerKey: 101
   RaycastDistance: 2.25
-  door: {fileID: 0}
+  door: {fileID: 537912478}
 --- !u!1001 &1061177654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5746,7 +5750,7 @@ Animator:
   m_GameObject: {fileID: 1063928780}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c8633345d6df34478867c512edbcc24, type: 2}
+  m_Controller: {fileID: 9100000, guid: 10161806d4111f244806f59093c9bf9e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5783,9 +5787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1063928780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8095c311116364694222ea1d618a72, type: 3}
+  m_Script: {fileID: 11500000, guid: f515f226edefa364faf0c343e09d737d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinDistanceToPlayer: 4
 --- !u!4 &1065323938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449186, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
@@ -7423,7 +7428,8 @@ PrefabInstance:
       propertyPath: m_text
       value: Press Q to Exit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6683465696018390528, guid: f45011f89199f734ba58caaa9aa84dcc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7546,6 +7552,28 @@ Transform:
   m_Father: {fileID: 643490577}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1372374340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4823445784431778874, guid: 673bce4ba653cbb4a8697fcfeb68b325, type: 3}
+  m_PrefabInstance: {fileID: 5945776293126898940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1372374344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372374340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91449e55430cc644f8d3d73ea8e51e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interactable: {fileID: 0}
+  MinDistance: 3.5
+  Layer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1374214086
 GameObject:
   m_ObjectHideFlags: 0
@@ -7578,7 +7606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerKey: 101
   RaycastDistance: 2.25
-  door: {fileID: 0}
+  door: {fileID: 4856336276635580}
 --- !u!65 &1374214088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9832,7 +9860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerKey: 101
   RaycastDistance: 2.75
-  door: {fileID: 0}
+  door: {fileID: 1063928783}
 --- !u!65 &1727114751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11267,7 +11295,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6683465696018390528, guid: f45011f89199f734ba58caaa9aa84dcc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -11522,9 +11551,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257243864545294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8095c311116364694222ea1d618a72, type: 3}
+  m_Script: {fileID: 11500000, guid: f515f226edefa364faf0c343e09d737d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinDistanceToPlayer: 4
 --- !u!23 &23861442091030974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11950,10 +11980,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6741251333776167775, guid: 673bce4ba653cbb4a8697fcfeb68b325, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4823445784431778874, guid: 673bce4ba653cbb4a8697fcfeb68b325, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1372374344}
   m_SourcePrefab: {fileID: 100100000, guid: 673bce4ba653cbb4a8697fcfeb68b325, type: 3}
 --- !u!1001 &8861767543296098333
 PrefabInstance:
