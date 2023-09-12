@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4823716020509857326}
   - component: {fileID: 7115882341697031388}
   - component: {fileID: 8101498646670845418}
-  - component: {fileID: 6741251333776167775}
+  - component: {fileID: 6705375765847140050}
   m_Layer: 5
   m_Name: UIHint
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Text: 'Press E to Interact
 
 '
---- !u!114 &6741251333776167775
+--- !u!114 &6705375765847140050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4823445784431778874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae643eeedc7f8d4a8a0e4b6b7d105c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 91449e55430cc644f8d3d73ea8e51e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Interactable: {fileID: 0}
   MinDistance: 3.5
+  Layer:
+    serializedVersion: 2
+    m_Bits: 128
