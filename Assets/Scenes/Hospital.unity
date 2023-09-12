@@ -8530,7 +8530,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 2ccfa11cd1bbde946a8e892f1d992124, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10446,7 +10446,7 @@ PrefabInstance:
     - target: {fileID: 8838993467718750076, guid: 78dc1f2f7ef70c74a8ecfc380bab48be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8b41c0ab9d55b6d4f962930d350c428c, type: 2}
+      objectReference: {fileID: 2100000, guid: ca9badc6484ef6b43a37aaa836457629, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
