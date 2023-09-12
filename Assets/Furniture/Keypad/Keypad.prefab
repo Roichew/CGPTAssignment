@@ -892,7 +892,7 @@ Transform:
   - {fileID: 5081707179163052389}
   - {fileID: 3599049042774554842}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &5069374324953449965
 MonoBehaviour:
@@ -903,11 +903,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533934885198259247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 486a4fed72e40af4fa8e6d42c83d2d93, type: 3}
+  m_Script: {fileID: 11500000, guid: df2bc9adc9a749c4fac0e1db8c9b66ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PressSpeed: 0.08
+  PressSpeed: 0
   UI_KPAD_ScreenCode: {fileID: 7421629907388049973}
+  UIWinBoard: {fileID: 0}
   TriggerKey: 101
 --- !u!1 &4900044669934283399
 GameObject:

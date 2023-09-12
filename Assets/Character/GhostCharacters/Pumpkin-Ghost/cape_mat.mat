@@ -195,6 +195,7 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+    - _Alpha: 1
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5
@@ -205,7 +206,7 @@ Material:
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
     - _Anisotropy: 0
-    - _Aura_Intensity: 22
+    - _Aura_Intensity: 20
     - _Aura_Scatter: 2.5
     - _BlendMode: 0
     - _BumpScale: 1
