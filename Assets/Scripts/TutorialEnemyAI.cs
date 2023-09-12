@@ -37,6 +37,7 @@ public class TutorialEnemyAI : MonoBehaviour
     void Start()
     {
         EnemyState(false);
+        
     }
     void Update()
     {
@@ -49,6 +50,7 @@ public class TutorialEnemyAI : MonoBehaviour
         if (Physics.Raycast(transform.position + rayCastOffset, direction, out hit, viewDistance)) { 
             if(hit.collider.gameObject.tag == "Player")
             {
+                Debug.Log("player hit");
                 walking = false;
                 StopCoroutine("chaseRoutine");
                 chasing = true;
@@ -63,12 +65,7 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.speed = chaseSpeed;
             if (AI.remainingDistance <= catchDistance)
             {
-                player.gameObject.SetActive(false);
-                animator.SetTrigger("jumpscare");
-                JumpscareSound.Play();
-                HeartBeatSound.Play();
-                StartCoroutine("deathRoutine");
-                chasing = false;
+                jumpscare();
             }
         }
 
@@ -110,6 +107,18 @@ public class TutorialEnemyAI : MonoBehaviour
         chasing = false;
         StopCoroutine("chaseRoutine");
         currentDest = Destinations[0];
+    }
+    public void jumpscare()
+    {
+        chasing = false;
+        walking = false;
+        walkSpeed = 0;
+        chaseSpeed = 0;
+        player.gameObject.SetActive(false);
+        animator.SetTrigger("jumpscare");
+        JumpscareSound.Play();
+        HeartBeatSound.Play();
+        StartCoroutine("deathRoutine");
     }
 
     IEnumerator chaseRoutine()
