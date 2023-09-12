@@ -210,7 +210,7 @@ Material:
     - _AlphaSrcBlend: 1
     - _Anisotropy: 0
     - _Aura_Intensity: 18
-    - _Aura_Scatter: 3
+    - _Aura_Scatter: 0.1
     - _BlendMode: 0
     - _BumpScale: 1
     - _CoatMask: 0
