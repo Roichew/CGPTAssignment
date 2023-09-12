@@ -76,6 +76,7 @@ public class Doors : MonoBehaviour
         Debug.Log("It Closes");
         door.SetBool("Open", false);
         door.SetBool("Closed", true);
+        isOpen = false;
     }
 
     void Jumpscare()
