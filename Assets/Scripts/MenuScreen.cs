@@ -72,12 +72,19 @@ public class MenuScreen : MonoBehaviour
 
     public void RestartGame()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        PauseScreen.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
+        PauseScreen.SetActive(false);
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene("Main Menu");
     }
 
