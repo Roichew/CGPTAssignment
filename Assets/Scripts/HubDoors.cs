@@ -12,7 +12,6 @@ public class HubDoors : MonoBehaviour
     public bool inReach;
     public string LevelOpen;
 
-
     void Start()
     {
         inReach = false;
@@ -43,9 +42,14 @@ public class HubDoors : MonoBehaviour
 
         if (inReach && Input.GetButtonDown("Interact"))
         {
-            SceneManager.LoadScene(LevelOpen);
             EnterLevel.Play();
+            Invoke("Switchlevel", 1);
         }
 
+    }
+
+    void Switchlevel()
+    {
+        SceneManager.LoadScene(LevelOpen);
     }
 }
