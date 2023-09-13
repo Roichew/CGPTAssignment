@@ -21,6 +21,7 @@ public class Doors : MonoBehaviour
     {
         inReach = false;
         isOpen = false;
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -81,7 +82,7 @@ public class Doors : MonoBehaviour
 
     void Jumpscare()
     {
-        int Randomizer = Random.Range(0, 4);
+        int Randomizer = Random.Range(0, 10);
         if (Randomizer <= SpawnChance)
         {
             Image.SetActive(true);
