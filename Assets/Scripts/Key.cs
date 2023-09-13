@@ -5,8 +5,8 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     public GameObject door;
-    private bool keyE;//是否可以按E键
-    public GameObject shiqu;//拾取提示
+    private bool keyE;//Mark whether the E key is pressed
+    public GameObject shiqu;//UI used to display key retrieval prompts
     void Start()
     {
         

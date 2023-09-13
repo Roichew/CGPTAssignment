@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    private bool open=false;//按键
+    private bool open=false;//Mark whether the door can be opened
     public  bool key=false;
     private Animator ani;
-    public GameObject uiText;//开门提示
-    public GameObject noKey;//是否有钥匙
+    public GameObject uiText;//UI showing prompt text
+    public GameObject noKey;//Prompt UI when there is no key
     public GameObject gamePassed;
     //Tutorial
     public bool isTutorial=false;
@@ -30,7 +30,7 @@ public class OpenDoor : MonoBehaviour
                     {
                         ani.SetBool("openDoor", true);
                         uiText.SetActive(false);
-                        //关闭触发器
+                        //Hide prompt text UI
                         gameObject.GetComponent<BoxCollider>().enabled = false;
                     }
                     else if (isTutorial == true)
@@ -50,9 +50,9 @@ public class OpenDoor : MonoBehaviour
         }
        
     }
-    public void Win() //完成的方法，挂载在开门之后一帧事件上
+    public void Win() //Processing function when the game is won
     {
-        gamePassed.SetActive(true) ;//开门后显示通关   
+        gamePassed.SetActive(true) ;//Display game clearance prompt UI
         Time.timeScale= 1f;
     }
    
