@@ -11,6 +11,7 @@ public class MenuScreen : MonoBehaviour
     [Space(10)]
     [Header("Shinda Screen")]
     [SerializeField] private GameObject DeathScene;
+    [SerializeField] public static bool isded;
 
     [Header("Pause Screen")]
     [SerializeField] private GameObject PauseScreen;
@@ -35,6 +36,11 @@ public class MenuScreen : MonoBehaviour
                 Pause();
             }
         }
+
+        if (isded)
+        {
+            Death();
+        }
     }
 
     public void Death()
@@ -43,6 +49,7 @@ public class MenuScreen : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 1f;
+        //By my shaggy bark
 
     }
     public void Pause()

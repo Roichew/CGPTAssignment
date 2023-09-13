@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3002.4075, g: 2109.4006, b: 1836.4456, a: 1}
+  m_IndirectSpecularColor: {r: 3002.8777, g: 2109.6077, b: 1836.7073, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -387,7 +387,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35228
+  m_Name: pb_Mesh35100
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -4677,7 +4677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33498
+  m_Name: pb_Mesh33322
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -6543,7 +6543,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34732
+  m_Name: pb_Mesh34560
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9392,7 +9392,7 @@ MonoBehaviour:
   player: {fileID: 659382903}
   destinationAmount: 0
   rayCastOffset: {x: 0, y: 0, z: 0}
-  deathScene: Tutorial
+  deathScene: 
 --- !u!1 &388902079
 GameObject:
   m_ObjectHideFlags: 0
@@ -11330,6 +11330,7 @@ GameObject:
   - component: {fileID: 459248979}
   - component: {fileID: 459248975}
   - component: {fileID: 459248980}
+  - component: {fileID: 459248981}
   m_Layer: 0
   m_Name: TutorialDoor (2)
   m_TagString: Untagged
@@ -11345,7 +11346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459248973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.71, y: -3.953568, z: -120.84}
+  m_LocalPosition: {x: 3.71, y: -3.953568, z: -120.953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11522,6 +11523,7 @@ MonoBehaviour:
   noKey: {fileID: 611568830}
   gamePassed: {fileID: 0}
   UnlockSound: {fileID: 459248980}
+  NoKey: {fileID: 459248981}
   isTutorial: 1
 --- !u!82 &459248980
 AudioSource:
@@ -11534,6 +11536,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 02eb0e244bc7da54bbaf7a1344de0466, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &459248981
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459248973}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 84694be73d4e16a408e1077b2d41b8ba, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -17914,7 +18012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528170764}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -14.886291, y: 3.8898218, z: 3.9304733}
+  m_LocalPosition: {x: -14.89, y: 3.8898218, z: 2.24}
   m_LocalScale: {x: 0.05, y: 0.050000004, z: 0.050000004}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -19063,7 +19161,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33574
+  m_Name: pb_Mesh33388
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -20823,7 +20921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611568832
@@ -20935,7 +21033,7 @@ GameObject:
   - component: {fileID: 613032162}
   - component: {fileID: 613032161}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: Dead Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23888,7 +23986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794496433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.3, y: 0, z: -103.657}
+  m_LocalPosition: {x: 48.59, y: 0, z: -103.657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27480,7 +27578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseButton: 112
-  DeathScene: {fileID: 0}
+  DeathScene: {fileID: 1736335807}
   PauseScreen: {fileID: 1344343757}
 --- !u!4 &969957114
 Transform:
@@ -32978,7 +33076,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 969957113}
         m_TargetAssemblyTypeName: MenuScreen, PlayerControllerDefinition
-        m_MethodName: Resume
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41612,7 +41710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1736335808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47271,7 +47369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020502963}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -14.899955, y: 2.1522253, z: 3.387474}
+  m_LocalPosition: {x: -14.9, y: 2.1522253, z: 1.7}
   m_LocalScale: {x: 0.106000006, y: 0.106, z: 0.106000006}
   m_ConstrainProportionsScale: 0
   m_Children:

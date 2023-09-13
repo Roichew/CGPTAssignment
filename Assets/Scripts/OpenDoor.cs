@@ -11,6 +11,7 @@ public class OpenDoor : MonoBehaviour
     public GameObject noKey;//Prompt UI when there is no key
     public GameObject gamePassed;
     public AudioSource UnlockSound;
+    public AudioSource NoKey;
     //Tutorial
     public bool isTutorial=false;
     void Start()
@@ -47,6 +48,7 @@ public class OpenDoor : MonoBehaviour
                 else 
                 {
                     noKey.SetActive(true) ;
+                    NoKey.Play();
                 }
             }
 
