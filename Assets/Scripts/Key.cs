@@ -6,7 +6,7 @@ public class Key : MonoBehaviour
 {
     public GameObject door;
     private bool keyE;//Mark whether the E key is pressed
-    public GameObject shiqu;//UI used to display key retrieval prompts
+    public GameObject collect;//UI used to display key retrieval prompts
     void Start()
     {
         
@@ -21,7 +21,7 @@ public class Key : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 door.GetComponent<OpenDoor>().key = true;
-                shiqu.SetActive(false);
+                collect.SetActive(false);
             }
         }
     }
@@ -30,7 +30,7 @@ public class Key : MonoBehaviour
         if (other.tag == "Player") 
         {
            keyE= true;
-           shiqu.SetActive(true);
+           collect.SetActive(true);
            
         }
     }
