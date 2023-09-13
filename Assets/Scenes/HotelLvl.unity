@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6720.841, g: 4566.803, b: 3778.567, a: 1}
+  m_IndirectSpecularColor: {r: 6720.448, g: 4566.5767, b: 3778.395, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16012,7 +16012,6 @@ GameObject:
   - component: {fileID: 993051841}
   - component: {fileID: 993051840}
   - component: {fileID: 993051845}
-  - component: {fileID: 993051846}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -16217,25 +16216,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &993051846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993051839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6eba24884341e549b7cbfa9b53d1f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 0}
-  openText: {fileID: 170863838}
-  doorSound: {fileID: 0}
-  Boo: {fileID: 0}
-  SpawnChance: 0
-  Image: {fileID: 0}
-  inReach: 0
 --- !u!1001 &1005119311
 PrefabInstance:
   m_ObjectHideFlags: 0

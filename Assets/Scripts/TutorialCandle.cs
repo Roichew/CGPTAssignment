@@ -9,38 +9,38 @@ public class TutorialCandle : MonoBehaviour
     public GameObject objectsToHide; // Old game objects to hide
     public GameObject[] objectsToShow; // New game objects to show
     bool interactable;
-    //public Light candleLight; // The light component of the candle
-    //public ParticleSystem candleParticles; // Particle system for the candle's flame effect
+    public Light candleLight; // The light component of the candle
+    public ParticleSystem candleParticles; // Particle system for the candle's flame effect
 
-     bool isLit = false;
+    bool isLit = false;
 
      void Start()
     {
         // Ensure the candle and its light are initially disabled
-        //candle.SetActive(false);
-        //candleLight.enabled = false;
-        //candleParticles.Stop();
+
+        candleLight.enabled = false;
+        candleParticles.Stop();
         interactable = false;
     }
 
      void OnTriggerStay(Collider other)
     {
-        Debug.Log(other);
-        if (other.CompareTag("Reach"))
+        if (isLit == false)
         {
-            Debug.Log("in range");
-            candleText.SetActive(true);
-            interactable = true;
+            if (other.CompareTag("Reach"))
+            {
+                candleText.SetActive(true);
+                interactable = true;
+            }
         }
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Reach"))
-        {
-            Debug.Log("Out of range");
-            candleText.SetActive(false);
-            interactable = false;
-        }
+          if (other.CompareTag("Reach"))
+            {
+                candleText.SetActive(false);
+                interactable = false;
+            }
     }
 
     void Update()
@@ -48,10 +48,9 @@ public class TutorialCandle : MonoBehaviour
         if (interactable == true) {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Eeeeee");
                 if (!isLit)
                 {
-                    //LightCandle();
+                    LightCandle();
                     HideOldObjects();
                     ShowNewObjects();
                 }
@@ -63,8 +62,9 @@ public class TutorialCandle : MonoBehaviour
     {
         isLit = true;
         candle.SetActive(true);
-        //candleLight.enabled = true;
-        //candleParticles.Play();
+        candleLight.enabled = true;
+        candleParticles.Play();
+        isLit = true;  
     }
 
      void HideOldObjects()

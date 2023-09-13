@@ -10,6 +10,7 @@ public class OpenDoor : MonoBehaviour
     public GameObject uiText;//UI showing prompt text
     public GameObject noKey;//Prompt UI when there is no key
     public GameObject gamePassed;
+    public AudioSource UnlockSound;
     //Tutorial
     public bool isTutorial=false;
     void Start()
@@ -32,12 +33,14 @@ public class OpenDoor : MonoBehaviour
                         uiText.SetActive(false);
                         //Hide prompt text UI
                         gameObject.GetComponent<BoxCollider>().enabled = false;
+                        UnlockSound.Play();
                     }
                     else if (isTutorial == true)
                     {
                         ani.SetBool("TutorialDoor", true);
                         uiText.SetActive(false);
                         gameObject.GetComponent<BoxCollider>().enabled = false;
+                        UnlockSound.Play();
                     }
                 }
                    

@@ -12,24 +12,29 @@ public class TutorialEnemyAI : MonoBehaviour
 
     [Space(10)]
     [SerializeField] public List<Transform> Destinations;
+
     [Space(10)]
     [Header("AI Game Object")]
     [SerializeField] public GameObject enemyObject;
+
     [Space(10)]
     [SerializeField] public Animator animator;
+
     public AudioSource SpawnSound,DespawnSound,JumpscareSound,HeartBeatSound;
-    [SerializeField] public float walkSpeed, chaseSpeed;
-    [SerializeField] public float viewDistance, catchDistance;
-    [SerializeField] public float jumpscareTime, chaseTime, minChaseTime, maxChaseTime;
-    public bool walking, chasing, despawn;
+
+    [SerializeField] private float walkSpeed, chaseSpeed;
+    [SerializeField] private float viewDistance, catchDistance;
+    [SerializeField] private float jumpscareTime, chaseTime, minChaseTime, maxChaseTime;
+
+    public bool walking, chasing, despawn,death=false;
     //public Transform spawnLocation;
     [Space(10)]
     [Header("Player")]
     [SerializeField] public Transform player;
+
     Transform currentDest;
     Vector3 dest;
-    //public int spawnNumber;
-    int randNum;
+    //int randNum;
     public int destinationAmount;
     public Vector3 rayCastOffset;
     public string deathScene;
@@ -77,11 +82,14 @@ public class TutorialEnemyAI : MonoBehaviour
             AI.speed = walkSpeed;
             AI.updateRotation = true;
             Debug.Log(Vector3.Distance(transform.position, currentDest.position));
-            if (Vector3.Distance(transform.position, currentDest.position) < 3f)
+            if (death == false)
             {
-                Debug.Log(transform.position);
-                enemyObject.SetActive(false);
-                //DespawnSound.Play();
+                if (Vector3.Distance(transform.position, currentDest.position) < 3f)
+                {
+                    Debug.Log(transform.position);
+                    enemyObject.SetActive(false);
+                    DespawnSound.Play();
+                }
             }
 
         }
@@ -112,6 +120,7 @@ public class TutorialEnemyAI : MonoBehaviour
     {
         chasing = false;
         walking = false;
+        death = true;
         walkSpeed = 0;
         chaseSpeed = 0;
         player.gameObject.SetActive(false);
