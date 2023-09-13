@@ -36,6 +36,7 @@ public class OpenDoor : MonoBehaviour
                     else if (isTutorial == true)
                     {
                         ani.SetBool("TutorialDoor", true);
+                        uiText.SetActive(false);
                         gameObject.GetComponent<BoxCollider>().enabled = false;
                     }
                 }
