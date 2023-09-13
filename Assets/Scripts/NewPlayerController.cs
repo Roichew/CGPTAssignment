@@ -11,7 +11,6 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField] float mass = 5f;
     [SerializeField] float acceleration = 20f;
 
-    Vector2 look;
     //internal to expose variable ouside of this file
     internal Vector3 velocity;
     CharacterController characterController;
@@ -40,8 +39,11 @@ public class NewPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateMovement();
-        UpdateGravity();
+        if (!MenuScreen.isPaused)
+        {
+            UpdateMovement();
+            UpdateGravity();
+        }
     }
 
     void UpdateMovement()
