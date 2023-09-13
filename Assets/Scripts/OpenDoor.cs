@@ -10,6 +10,8 @@ public class OpenDoor : MonoBehaviour
     public GameObject uiText;//开门提示
     public GameObject noKey;//是否有钥匙
     public GameObject gamePassed;
+    //Tutorial
+    public bool isTutorial=false;
     void Start()
     {
         ani= GetComponent<Animator>();
@@ -24,10 +26,18 @@ public class OpenDoor : MonoBehaviour
             {
                 if (key)
                 {
-                    ani.SetBool("openDoor", true);
-                    uiText.SetActive(false);
-                    //关闭触发器
-                    gameObject.GetComponent<BoxCollider>().enabled= false;
+                    if (isTutorial == false)
+                    {
+                        ani.SetBool("openDoor", true);
+                        uiText.SetActive(false);
+                        //关闭触发器
+                        gameObject.GetComponent<BoxCollider>().enabled = false;
+                    }
+                    else if (isTutorial == true)
+                    {
+                        ani.SetBool("TutorialDoor", true);
+                        gameObject.GetComponent<BoxCollider>().enabled = false;
+                    }
                 }
                    
                 else 
