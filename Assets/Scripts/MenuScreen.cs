@@ -74,7 +74,7 @@ public class MenuScreen : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
-        PauseScreen.SetActive(false);
+        DeathScene.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

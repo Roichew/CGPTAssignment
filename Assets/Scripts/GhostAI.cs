@@ -9,6 +9,7 @@ public class GhostAI : MonoBehaviour
     [SerializeField] private float Height = 10.92f;
     [SerializeField] private Collider[] WanderAreas;
     [SerializeField] private float DurationPerArea;
+    [SerializeField] public string RestartLevelName;
 
     // ~ Not-serialized
     private bool isRotating;
@@ -140,8 +141,10 @@ public class GhostAI : MonoBehaviour
     {
         // Restarts the level if the player touches the ghost
         if (collider.CompareTag("Player"))
-            LVLManager.instance.RestartLevel();
-
+        
+        {
+            LVLManager.instance.RestartLevel(RestartLevelName);
+        }
 
     }
 }

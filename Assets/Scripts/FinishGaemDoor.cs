@@ -12,6 +12,8 @@ public class FinishGaemDoor : MonoBehaviour
     public AudioSource HAha;
     public bool inReach;
     public string LevelOpen;
+    public int EndDuration;
+    public GameObject player;
 
     void Start()
     {
@@ -44,12 +46,19 @@ public class FinishGaemDoor : MonoBehaviour
             {
                 HAha.Play();
                 Win.SetActive(true);
-                Invoke("Switchlevel", 1);
+                player.SetActive(false);
+                StartCoroutine("EndScene");
             }
         }
     }
-    void Switchlevel()
+  
+
+    IEnumerator EndScene()
     {
+        
+        yield return new WaitForSeconds(EndDuration);
         SceneManager.LoadScene(LevelOpen);
+
+
     }
 }

@@ -31,7 +31,7 @@ public class LockPick : MonoBehaviour
     private float keyPressTime = 0;
 
     private bool movePick = true;
-
+    HubDoors hub;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,9 +89,10 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
-                Scare();
+                //Scare();
                 Invoke("Unlocked", 1);
                 Finished.Play();
+                HubDoors.HotelCompleted = true;
             }
 
             else

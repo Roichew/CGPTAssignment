@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 5984.9614, g: 3823.3345, b: 2816.5588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1513824681}
         m_TargetAssemblyTypeName: MenuScreen, PlayerControllerDefinition
         m_MethodName: RestartGame
         m_Mode: 1
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1513824681}
         m_TargetAssemblyTypeName: MenuScreen, PlayerControllerDefinition
         m_MethodName: MainMenu
         m_Mode: 1
@@ -3745,6 +3745,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4207329327867848, guid: 2ca85dfd1a5ba8d45b36c20053b13142, type: 3}
   m_PrefabInstance: {fileID: 663999639}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &676361357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676361359}
+  - component: {fileID: 676361358}
+  m_Layer: 0
+  m_Name: Local Volumetric Fog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676361358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676361357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fbb15bf92b84f40a1eb030765b5afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameters:
+    albedo: {r: 0.27163926, g: 1, b: 0.0141509175, a: 1}
+    meanFreePath: 2
+    blendingMode: 1
+    priority: 0
+    anisotropy: 0
+    volumeMask: {fileID: 0}
+    textureScrollingSpeed: {x: 0, y: 0, z: 0}
+    textureTiling: {x: 1, y: 1, z: 1}
+    positiveFade: {x: 0.34666666, y: 0.27882037, z: 0.37142855}
+    negativeFade: {x: 0.34666666, y: 0.27882037, z: 0.37142855}
+    m_EditorUniformFade: 1.04
+    m_EditorPositiveFade: {x: 0.033333316, y: 0.026809653, z: 0.03571425}
+    m_EditorNegativeFade: {x: 0.033333316, y: 0.026809653, z: 0.03571425}
+    m_EditorAdvancedFade: 0
+    size: {x: 3, y: 3.73, z: 2.8}
+    invertFade: 0
+    distanceFadeStart: 20
+    distanceFadeEnd: 20
+    textureOffset: {x: 0, y: 0, z: 0}
+    falloffMode: 1
+    maskMode: 0
+    materialMask: {fileID: 0}
+  m_Version: 2
+--- !u!4 &676361359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676361357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.11, y: 1.3, z: -0.131}
+  m_LocalScale: {x: 1.5074055, y: 1.5074055, z: 1.5074055}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1509252604}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &684905881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3952,7 +4020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -7366,8 +7434,16 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5044696382360485386, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
+      propertyPath: DeathScene
+      value: 
+      objectReference: {fileID: 940806403}
+    - target: {fileID: 5044696382360485386, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
       propertyPath: DurationPerArea
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044696382360485386, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
+      propertyPath: RestartLevelName
+      value: Hospital
       objectReference: {fileID: 0}
     - target: {fileID: 5044696382360485386, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
       propertyPath: WanderAreas.Array.size
@@ -7460,7 +7536,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6282874688210475882, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7491682258874403804, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 676361359}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3723056540946546150, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
       insertIndex: -1
@@ -10872,6 +10951,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &1509252604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7491682258874403804, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
+  m_PrefabInstance: {fileID: 1096601180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513824680
 GameObject:
   m_ObjectHideFlags: 0
@@ -11464,13 +11548,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1513824681}
+        m_TargetAssemblyTypeName: MenuScreen, PlayerControllerDefinition
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

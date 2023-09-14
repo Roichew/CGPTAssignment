@@ -16,8 +16,8 @@ public class LVLManager : MonoBehaviour
         SceneManager.LoadScene("HUBHUBHUBHUB", LoadSceneMode.Single);
     }
 
-    public void RestartLevel()
+    public void RestartLevel(string RestartLevel)
     {
-        SceneManager.LoadScene("Hospital", LoadSceneMode.Single);
+        SceneManager.LoadScene(RestartLevel, LoadSceneMode.Single);
     }
 }

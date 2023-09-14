@@ -8,6 +8,7 @@ using static Codice.CM.Common.CmCallContext;
 
 public class KeypadManager : MonoBehaviour
 {
+    private HubDoors hubdoors;
     [SerializeField] public float PressSpeed;
     [SerializeField] public TextMeshPro UI_KPAD_ScreenCode;
     [SerializeField] private GameObject UIWinBoard;
@@ -29,12 +30,14 @@ public class KeypadManager : MonoBehaviour
     // Not-serialized
     private KPAD_Key[] keys;
     public bool isResetting { get; set; }
+    
 
     // Static constructor
     public static KeypadManager Instance;
 
     [SerializeField] public KeyCode TriggerKey = KeyCode.E;
 
+   
     private void Awake()
     {
         Instance = this;
@@ -86,7 +89,7 @@ public class KeypadManager : MonoBehaviour
 
                 UI_KPAD_ScreenCode.color = new Color(0, 1, 0, 1);
                 SceneManager.LoadScene(NextLevelName, LoadSceneMode.Single);
-                //LVLManager.instance.Invoke("TeleportToHub", 3f);
+                HubDoors.HospitalCompleted = true;
                 Correct.Invoke();
                 UIWinBoard.SetActive(true);
             }
@@ -100,7 +103,7 @@ public class KeypadManager : MonoBehaviour
                 Invoke("ResetScreenCode", 1.25f);
                 isResetting = true;
                 Incorrect.Invoke();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
                 //LVLManager.instance.Invoke("RestartLevel", 1f);
 
             }

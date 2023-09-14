@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -9,9 +10,10 @@ public class OpenDoor : MonoBehaviour
     private Animator ani;
     public GameObject uiText;//UI showing prompt text
     public GameObject noKey;//Prompt UI when there is no key
-    public GameObject gamePassed;
+    //public GameObject gamePassed;
     public AudioSource UnlockSound;
     public AudioSource NoKey;
+    public string levelToLoad;
     //Tutorial
     public bool isTutorial=false;
     void Start()
@@ -34,6 +36,8 @@ public class OpenDoor : MonoBehaviour
                         uiText.SetActive(false);
                         //Hide prompt text UI
                         gameObject.GetComponent<BoxCollider>().enabled = false;
+                        HubDoors.HouseCompleted = true;
+                        SceneManager.LoadScene(levelToLoad);
                         UnlockSound.Play();
                     }
                     else if (isTutorial == true)
@@ -57,7 +61,7 @@ public class OpenDoor : MonoBehaviour
     }
     public void Win() //Processing function when the game is won
     {
-        gamePassed.SetActive(true) ;//Display game clearance prompt UI
+       /* gamePassed.SetActive(true)*/ ;//Display game clearance prompt UI
         Time.timeScale= 1f;
     }
    

@@ -4,17 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class HubDoors : MonoBehaviour
 {
     public GameObject openText;
+    public GameObject finalDoor;
     public AudioSource EnterLevel;
     public bool inReach;
     public string LevelOpen;
+    public static bool HotelCompleted, HouseCompleted, HospitalCompleted;
 
     void Start()
     {
         inReach = false;
+       
     }
 
     void OnTriggerEnter(Collider other)
@@ -46,12 +50,20 @@ public class HubDoors : MonoBehaviour
                 EnterLevel.Play();
                 Invoke("Switchlevel", 1);
             }
-        }
 
+            if (HotelCompleted && HouseCompleted && HospitalCompleted)
+            {
+                Debug.Log("All completed");
+                finalDoor.SetActive(true);
+
+            }
+        }
     }
 
     void Switchlevel()
     {
         SceneManager.LoadScene(LevelOpen);
     }
+
+
 }
