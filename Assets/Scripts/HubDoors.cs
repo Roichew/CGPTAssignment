@@ -39,11 +39,13 @@ public class HubDoors : MonoBehaviour
 
     void Update()
     {
-
-        if (inReach && Input.GetButtonDown("Interact"))
+        if (!MenuScreen.isPaused)
         {
-            EnterLevel.Play();
-            Invoke("Switchlevel", 1);
+            if (inReach && Input.GetButtonDown("Interact"))
+            {
+                EnterLevel.Play();
+                Invoke("Switchlevel", 1);
+            }
         }
 
     }
