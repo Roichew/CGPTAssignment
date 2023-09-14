@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4603.025, g: 3252.9614, b: 3230.2349, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &323252761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10178,6 +10178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3772587914570214258, guid: caa1fe3d1d267934ca4fd323a02a19b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5686857717029881754, guid: caa1fe3d1d267934ca4fd323a02a19b2, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -10330,7 +10334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504138641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.89, y: 5.31, z: -33.42}
+  m_LocalPosition: {x: 5.89, y: 17.73, z: -33.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10598,7 +10602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &884287872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10678,7 +10682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884287871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.22, y: 5.2, z: -11.631}
+  m_LocalPosition: {x: 8.22, y: 17.63, z: -11.631}
   m_LocalScale: {x: 46, y: 0.5, z: 43.587963}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12736,11 +12740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d0b28b7774194c4894e1dbe53a62d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.376
+      value: 12.953
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d0b28b7774194c4894e1dbe53a62d96, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.96
+      value: 4.798
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d0b28b7774194c4894e1dbe53a62d96, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12809,8 +12813,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18672438, y: 0.16897346, z: 0.11189258}
-  m_Center: {x: -0.08368768, y: -0.07079821, z: -0.036197726}
+  m_Size: {x: 0.18672438, y: 0.1, z: 0.11189258}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1421505020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13317,6 +13321,10 @@ PrefabInstance:
     - target: {fileID: 3772587914570214258, guid: caa1fe3d1d267934ca4fd323a02a19b2, type: 3}
       propertyPath: m_Name
       value: Area_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772587914570214258, guid: caa1fe3d1d267934ca4fd323a02a19b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5686857717029881754, guid: caa1fe3d1d267934ca4fd323a02a19b2, type: 3}
       propertyPath: m_RootOrder
@@ -18757,6 +18765,10 @@ PrefabInstance:
     - target: {fileID: 3723056540946546150, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
       propertyPath: m_Name
       value: Ghost-PumpkinKing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723056540946546150, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5044696382360485386, guid: 4c100b87171c2bd4f81e1368b3709ab0, type: 3}
       propertyPath: Speed
