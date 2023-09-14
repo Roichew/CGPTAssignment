@@ -9,6 +9,9 @@ public class LockPick : MonoBehaviour
     public Transform innerLock;
     public Transform pickPosition;
 
+    public GameObject AHH;
+    public AudioSource Meerp;
+
     public AudioSource Finished;
 
     public float maxAngle = 90;
@@ -86,6 +89,7 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
+                Scare();
                 Invoke("Unlocked", 1);
                 Finished.Play();
             }
@@ -106,5 +110,17 @@ public class LockPick : MonoBehaviour
     void Unlocked()
     {
        SceneManager.LoadScene(levelToLoad);
+    }
+
+    void Scare()
+    {
+        AHH.SetActive(true);
+        Meerp.Play();
+        Invoke("JumpImage", 1);
+    }
+
+    private void Off()
+    {
+        AHH.SetActive(false);
     }
 }
