@@ -18,6 +18,7 @@ public class GhostAI : MonoBehaviour
     private Animator ghostAnim;
     private int AreaTracker = 0;
     private float _areaTimer = 0.0f;
+    private int areaIndex;
 
     private const float MinSpawnRangeX = 38.0f;
     private const float MaxSpawnRangeX = 46.0f;
@@ -31,6 +32,7 @@ public class GhostAI : MonoBehaviour
         float randomPosZ = Random.Range(MinSpawnRangeZ, MaxSpawnRangeZ);
 
         transform.position = new Vector3(randomPosX, Height, randomPosZ);
+        areaIndex = 0;
     }
 
     private void Start()
@@ -58,7 +60,7 @@ public class GhostAI : MonoBehaviour
     // Set target to the next area
     private Vector3 SelectArea()
     {
-        int numOfAreas = WanderAreas.Length - 1;
+        int numOfAreas = WanderAreas.Length -1;
 
         if (AreaTracker + 1 <= numOfAreas) {
             AreaTracker++;
@@ -137,7 +139,9 @@ public class GhostAI : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         // Restarts the level if the player touches the ghost
-        if (collider.gameObject.tag == "Player")
+        if (collider.CompareTag("Player"))
             LVLManager.instance.RestartLevel();
+
+
     }
 }
