@@ -89,7 +89,7 @@ public class LockPick : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
-                //Scare();
+                Scare();
                 Invoke("Unlocked", 1);
                 Finished.Play();
                 HubDoors.HotelCompleted = true;
